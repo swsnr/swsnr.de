@@ -1,0 +1,12 @@
+title: Basti
+email: sebastian@swsnr.de
+description: >-
+  Scala software developer. System engineer satellite mission planning. Rust. Arch.
+baseurl: ""
+url: ""
+github_username: swsnr
+
+# Build settings
+markdown: kramdown
+
+remote_theme: jekyll/minima
