@@ -15,8 +15,7 @@ author:
 # Build settings
 markdown: kramdown
 
-header_pages:
-  - about.md
+header_pages: []
 
 remote_theme: jekyll/minima
 minima:
