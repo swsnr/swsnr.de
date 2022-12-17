@@ -25,6 +25,8 @@ theme: minima
 minima:
   skin: solarized
   social_links:
+    - platform: rss
+      user_url: https://swsnr.de/feed.xml
     - platform: github
       user_url: https://github.com/swsnr
     - platform: linkedin
