@@ -13,7 +13,9 @@ author:
 markdown: kramdown
 timezone: UTC
 kramdown:
-  input: Kramdown
+  input: GFM
+  hard_wrap: false
+  gfm_quirks: [no_auto_typographic]
   auto_id_stripping: true
   smart_quotes: ["apos", "apos", "quot", "quot"]
 header_pages: []
