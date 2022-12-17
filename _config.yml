@@ -18,7 +18,7 @@ kramdown:
   gfm_quirks: [no_auto_typographic]
   auto_id_stripping: true
   smart_quotes: ["apos", "apos", "quot", "quot"]
-header_pages: []
+header_pages: [privacy.md]
 
 theme: minima
 minima:
