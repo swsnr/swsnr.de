@@ -1,9 +1,7 @@
 title: Basti
 description: >-
   Scala software developer. System engineer satellite mission planning. Rust. Arch.
-# The github metadata plugin sets these for us
-# baseurl: ""
-# url: ""
+repository: swsnr/swsnr.de
 
 excerpt_separator: "<!--more-->"
 show_excerpts: true
@@ -17,7 +15,7 @@ markdown: kramdown
 
 header_pages: []
 
-remote_theme: jekyll/minima
+theme: minima
 minima:
   skin: solarized
   social_links:
@@ -29,16 +27,3 @@ minima:
 relative_links:
   enabled:     true
   collections: true
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-redirect-from
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-sidemap
-  - jekyll-gist
-  - jekyll-optional-front-matter
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
-  - jekyll-relative-links
