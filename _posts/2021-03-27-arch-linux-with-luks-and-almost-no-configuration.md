@@ -103,11 +103,11 @@ $ poweroff
 
 Now we can remove the installation media and start the system again; by holding the space key during boot we make the boot menu appear to verify that the generated unified kernel images are indeed recognized by systemd-boot:
 
-![boot menu with unified kernel images for linux and linux-lts](https://i.snap.as/pPwaIIIg.png)
+![boot menu with unified kernel images for linux and linux-lts](../images/boot-menu-uki.png)
 
 systemd-boot seems to pick the image with the highest version number automatically. Upon boot the image automatically discovers the LUKS root partition and offers to unlock it:
 
-![cryptsetup prompt for automatically discovered root partition](https://i.snap.as/A0oL4mpy.png)
+![cryptsetup prompt for automatically discovered root partition](../images/auto-discovered-luks-partition.png)
 
 All this happens automatically; we did not have to configure `/etc/fstab` and `/etc/crypttab.initramfs` to specify the root filesystem, nor `/etc/mkinitcpio.conf` to include the right systemd and cryptsetup hooks.
 
@@ -154,4 +154,4 @@ The `default` stanza supports glob patterns; systemd boot then picks the matchin
 
 This setup now boots seamlessly into the getty prompt:
 
-![](https://i.snap.as/55HnhEYi.webp)\\
+![](../images/auto-discovered-boot.wepb)

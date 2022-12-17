@@ -185,9 +185,7 @@ Now enable the boot loader menu to be able to select a kernel at boot and reboot
 
 The firmware now prohibits booting the unsigned kernel, but allows the signed kernel:
 
-![](https://i.snap.as/Bc9nOAYa.webp)
-
-![secureboot with prohibited and permitted binary](/images/secureboot.webp)
+![secureboot with prohibited and permitted binary](../images/secure-boot-demo.webp)
 
 ## Open points
 
