@@ -11,7 +11,7 @@ I like the idea of encrypting the rootfs with a TPM2 key; it allows booting with
 
 Secure boot will prevent others from placing custom kernels on the unencrypted EFI system partition and booting these, or changing the kernel cmdline, in order to obtain root access to the unlocked rootfs.  LUKS encryption with a TPM-based key bound to secure boot state protects the data if someone removes the hard disk and attempts to access it offline, or tries to disable secure boot in order to boot a custom kernel.
 
-I’ve covered [secure boot setup in a past article](https://lunaryorn.com/secure-boot-on-arch-linux-with-sbctl-and-dracut); this article talks about the TPM2-based encryption.
+I’ve covered [secure boot setup in a past article](2021-04-01-secure-boot-on-arch-linux-with-sbctl-and-dracut.md); this article talks about the TPM2-based encryption.
 
 <!--more-->
 
