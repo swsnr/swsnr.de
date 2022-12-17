@@ -74,7 +74,7 @@ Now we can mount the filesystems and create some basic btrfs subvolumes:
 $ mount "$root_device" /mnt
 $ mkdir /mnt/efi
 $ mount /dev/disk/by-partlabel/EFISYSTEM /mnt/efi
-$ for subvol in var var/log var/cache var/tmp srv home; do btrfs subvolume create "/mnt/$subvol" done
+$ for subvol in var var/log var/cache var/tmp srv home; do btrfs subvolume create "/mnt/$subvol"; done
 ```
 
 Now we’re ready to bootstrap Arch Linux: We generate a mirrorlist and install essential packages:
