@@ -26,6 +26,10 @@ minima:
     - platform: linkedin
       user_url: https://www.linkedin.com/in/swsnr/
 
+relative_links:
+  enabled:     true
+  collections: true
+
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
