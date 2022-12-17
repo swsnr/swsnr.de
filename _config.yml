@@ -5,6 +5,7 @@ repository: swsnr/swsnr.de
 
 excerpt_separator: "<!--more-->"
 show_excerpts: true
+permalink: pretty
 
 author:
   name: Basti
