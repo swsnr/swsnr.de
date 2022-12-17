@@ -10,8 +10,8 @@ author:
   name: Basti
   email: sebastian@swsnr.de
 
-# Build settings
 markdown: kramdown
+timezone: UTC
 
 header_pages: []
 
