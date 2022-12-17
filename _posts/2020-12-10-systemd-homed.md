@@ -2,7 +2,7 @@
 title: systemd-homed
 tags: ["archlinux", "systemd", "homed"]
 last_modified_at: 2021-07-27T09:56:17+00:00
-redirect_from: /systemd-homed
+redirect_from: /systemd-homed/
 ---
 
 Observations from using systemd-homed for a couple of days:

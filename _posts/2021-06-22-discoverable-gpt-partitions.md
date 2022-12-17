@@ -2,7 +2,7 @@
 title: Discoverable GPT partitions
 tags: ["archlinux", "systemd"]
 last_modified_at: 2021-07-27T09:56:23+00:00
-redirect_from: /discoverable-gpt-partitions
+redirect_from: /discoverable-gpt-partitions/
 ---
 
 LWN [recently covered](https://lwn.net/Articles/859240/) a comprehensive guide about [discoverable GPT disk images](http://0pointer.net/blog/the-wondrous-world-of-discoverable-gpt-disk-images.html) by Lennart Poettering.

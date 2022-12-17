@@ -2,7 +2,7 @@
 title: Compose emojis
 tags: []
 last_modified_at: 2021-11-06T18:16:56+00:00
-redirect_from: /compose-emojis
+redirect_from: /compose-emojis/
 ---
 
 I just learned a nice trick: On Linux I can actually define custom sequences for the Compose key.  

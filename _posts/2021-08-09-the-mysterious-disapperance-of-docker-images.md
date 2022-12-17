@@ -2,7 +2,7 @@
 title: The mysterious disapperance of Docker images
 tags: ["kubernetes", "gitlab", "docker"]
 last_modified_at: 2021-08-23T18:45:29+00:00
-redirect_from: /the-mysterious-disapperance-of-docker-images
+redirect_from: /the-mysterious-disapperance-of-docker-images/
 ---
 
 A node hosts a Gitlab runner and a small k3s cluster which runs a few services as regular kubernetes deployments. A CI job pinned to that runner builds Docker images  for these services services, updates the image of the corresponding deployments, and starts a few system and acceptance tests. The CI job does not push those images to the in-house registry; to avoid polluting the registry with hundreds of images it just builds locally.

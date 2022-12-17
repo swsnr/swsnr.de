@@ -2,7 +2,7 @@
 title: My Arch setup
 tags: [archlinux]
 last_modified_at: 2021-07-04T10:41:04+00:00
-redirect_from: /my-arch-setup
+redirect_from: /my-arch-setup/
 ---
 
 I like Arch Linux and use it for my systems whereever possible. In this post I’ll briefly go through my preferred Arch Linux setup.

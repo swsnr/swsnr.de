@@ -2,7 +2,7 @@
 title: Unlock LUKS rootfs with TPM2 key
 tags: ["dracut", "luks", "sbctl", "archlinux", "systemd", "tpm2", "secureboot"]
 last_modified_at: 2022-01-06T16:51:56+00:00
-redirect_from: /unlock-luks-rootfs-with-tpm2-key
+redirect_from: /unlock-luks-rootfs-with-tpm2-key/
 ---
 
 Historically cryptsetup and LUKS only supported good old passwords; however recent systemd versions extend cryptsetup with [additional key types](https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html) such as FIDO tokens and TPM devices.
