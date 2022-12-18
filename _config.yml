@@ -3,25 +3,31 @@ description: >-
   Scala software developer. System engineer satellite mission planning. Rust. Arch.
 repository: swsnr/swsnr.de
 url: https://swsnr.de
-
 excerpt_separator: "<!--more-->"
 show_excerpts: true
+timezone: UTC
 
 author:
   name: Basti
   email: sebastian@swsnr.de
 
+relative_links:
+  enabled:     true
+  collections: true
+
+feed:
+  tags: true
+
 markdown: kramdown
-timezone: UTC
 kramdown:
   input: GFM
   hard_wrap: false
   gfm_quirks: [no_auto_typographic]
   auto_id_stripping: true
   smart_quotes: ["apos", "apos", "quot", "quot"]
-header_pages: [privacy.md]
 
 theme: minima
+header_pages: [privacy.md]
 minima:
   skin: solarized
   social_links:
@@ -34,6 +40,3 @@ minima:
     - platform: linkedin
       user_url: https://www.linkedin.com/in/swsnr/
 
-relative_links:
-  enabled:     true
-  collections: true
