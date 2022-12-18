@@ -6,6 +6,14 @@ GIT
       jekyll (>= 3.3, < 5.0)
 
 GIT
+  remote: https://github.com/jekyll/github-metadata.git
+  revision: 2c1b5591a61bf18fc604112896479f72c102e3e2
+  specs:
+    jekyll-github-metadata (2.15.0)
+      jekyll (>= 3.4, < 5.0)
+      octokit (~> 4.0, != 4.4.0)
+
+GIT
   remote: https://github.com/jekyll/jekyll-sass-converter.git
   revision: 3b0d92059b4e2764b0d2c25f155373e92733c013
   specs:
@@ -62,9 +70,6 @@ GEM
       jekyll (>= 3.0, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-github-metadata (2.15.0)
-      jekyll (>= 3.4, < 5.0)
-      octokit (~> 4.0, != 4.4.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-seo-tag (2.8.0)
@@ -112,7 +117,7 @@ DEPENDENCIES
   jekyll
   jekyll-default-layout
   jekyll-feed
-  jekyll-github-metadata
+  jekyll-github-metadata!
   jekyll-redirect-from
   jekyll-relative-links!
   jekyll-sass-converter!
