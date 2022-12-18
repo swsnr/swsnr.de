@@ -30,7 +30,7 @@ kramdown:
 theme: minima
 header_pages: [privacy.md]
 minima:
-  skin: solarized
+  skin: auto
   social_links:
     - platform: rss
       user_url: https://swsnr.de/feed.xml
