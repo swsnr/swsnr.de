@@ -1,9 +1,12 @@
 ---
 title: My Arch setup
 tags: [archlinux]
-last_modified_at: 2021-07-04T10:41:04+00:00
+last_modified_at: 2022-12-18T10:25:05Z
 redirect_from: /my-arch-setup/
 ---
+
+**Note:** This setup has evolved since, and is no longer update to date.
+I no longer use a GRML rescue system or a separate `/home`, I use flatpak a lot these days, and make my backups with restic.
 
 I like Arch Linux and use it for my systems whereever possible. In this post I’ll briefly go through my preferred Arch Linux setup.
 
