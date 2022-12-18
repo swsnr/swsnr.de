@@ -28,7 +28,7 @@ kramdown:
   smart_quotes: ["apos", "apos", "quot", "quot"]
 
 theme: minima
-header_pages: [privacy.md]
+header_pages: [privacy.md, colophon.md]
 minima:
   skin: swsnr
   social_links:
