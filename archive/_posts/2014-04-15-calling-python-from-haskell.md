@@ -12,6 +12,11 @@ which is less good and supports less languages than the Python library
 It's easy to implement custom highlighting thanks to the great API of Pandoc,
 with just two functions in [**Text.Highlighting.Pygments.Pandoc**][thpp]:
 
+[pandoc]: http://johnmacfarlane.net/pandoc/
+[highlighting-kate]: http://hackage.haskell.org/package/highlighting-kate
+[pygments]: http://pygments.org/
+[thpp]: https://github.com/lunaryorn/blog/blob/f9c1c518bb140d25a49ca2592d8664a43c67ff6f/src/Text/Highlighting/Pygments/Pandoc.hs
+
 <!--more-->
 
 ```haskell
@@ -42,11 +47,7 @@ implement with just a few lines it also slows down the build considerably.
 Last weekend I sat down and tried to call Pygments directly via Python's C API
 through Haskell's FFI.  This is what came out of this adventure.
 
-[pandoc]: http://johnmacfarlane.net/pandoc/
-[highlighting-kate]: http://hackage.haskell.org/package/highlighting-kate
-[pygments]: http://pygments.org/
 [pygmentize]: http://pygments.org/docs/cmdline/
-[thpp]: https://github.com/lunaryorn/blog/blob/f9c1c518bb140d25a49ca2592d8664a43c67ff6f/src/Text/Highlighting/Pygments/Pandoc.hs
 
 ## Native wrappers ##
 
