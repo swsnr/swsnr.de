@@ -3,7 +3,7 @@ title: "Calling Python from Haskell"
 tags: [haskell]
 ---
 
-In a past version of this blog I used [Pandoc][] to convert Markdown to HTML[^1].
+In a past version of this blog I used [Pandoc][] to convert Markdown to HTML.
 It's by far the best and most powerful markdown converter, but it has one,
 albeit little weakness: Its syntax highlighting is based [highlighting-kate][],
 which is less good and supports less languages than the Python library
@@ -11,6 +11,8 @@ which is less good and supports less languages than the Python library
 
 It's easy to implement custom highlighting thanks to the great API of Pandoc,
 with just two functions in [**Text.Highlighting.Pygments.Pandoc**][thpp]:
+
+<!--more-->
 
 ```haskell
 import Text.Highlighting.Pygments (toHtml)
@@ -350,10 +352,5 @@ generally renowned for its advancement of computer science also excels at the
 dirty low-level task of calling C libraries.
 
 [pbv]: https://docs.python.org/2/c-api/arg.html#Py_BuildValue
-
-[^1]: I used to build this blog with [Hakyll][] but that is no longer the case.
-
-    While Hakyll is a great piece of software and the underlying Pandoc even more magnificent, managing the blog on top of Haskell became a pain.  Building the blog from scratch took ages because all of Pandoc and Hakyll had to be compiled, and hosting was a nightmare because no popular hosting platform supports Haskell.
-    These days this blog runs on top of Hugo.  See [About]({{<relref "/about">}}) for more details.
 
 [hakyll]: https://jaspervdj.be/hakyll/

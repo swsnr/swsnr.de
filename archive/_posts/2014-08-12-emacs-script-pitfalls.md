@@ -8,11 +8,11 @@ Emacs isn't just an editor, it’s an entire Emacs Lisp interpreter and
 environment.  We can use Emacs Lisp not only to extend and customize our beloved editor, but also to write entire programs and applications.  Nic Ferrier’s [elnode][] server is the most ambitious Emacs Lisp application of this sort, but we can start at a smaller scale and try to write our shell scripts and tools
 with Emacs Lisp.
 
+<!--more-->
+
 However, it turns out that writing programs in Emacs Lisp is more intricate than it looks at a first glance.  Emacs decades-long history as interactive application have left deep marks in Emacs and Emacs Lisp, which make independent noninteractive scripts difficult.
 
 [elnode]: https://github.com/nicferrier/elnode
-
-<!--more-->
 
 ## Making Emacs Lisp scripts executable
 
