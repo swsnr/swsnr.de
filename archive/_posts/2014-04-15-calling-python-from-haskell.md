@@ -1,6 +1,6 @@
 ---
 title: "Calling Python from Haskell"
-tags: [haskell]
+tags: [haskell, python]
 ---
 
 In a past version of this blog I used [Pandoc][] to convert Markdown to HTML.
