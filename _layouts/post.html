@@ -24,7 +24,9 @@ layout: default
         </time>
       {%- endif -%}
       {%- if page.categories contains 'archive' -%}
-      <strong>(ARCHIVED)</strong>
+      <strong>
+        (ARCHIVED)
+      </strong>
       {%- endif -%}
       {%- if page.author -%}
         • {% for author in page.author %}
