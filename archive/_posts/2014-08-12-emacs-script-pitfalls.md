@@ -2,6 +2,7 @@
 title: "Emacs script pitfalls"
 last_modified_at: 2022-12-18T11:01:22Z
 tags: [emacs]
+redirect_from: /2014/08/12/emacs-script-pitfalls.html
 ---
 
 **Note:** This post is archived.  I haven't used Emacs in years, and I'll not

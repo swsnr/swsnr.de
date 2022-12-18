@@ -6,6 +6,7 @@ url: https://swsnr.de
 excerpt_separator: "<!--more-->"
 show_excerpts: true
 timezone: UTC
+permalink: date
 
 author:
   name: Basti

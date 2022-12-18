@@ -23,6 +23,9 @@ layout: default
           {{ mdate | date: date_format }}
         </time>
       {%- endif -%}
+      {%- if page.categories contains 'archive' -%}
+      <strong>(ARCHIVED)</strong>
+      {%- endif -%}
       {%- if page.author -%}
         • {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
