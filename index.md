@@ -6,7 +6,7 @@ layout: home
 
 I work as a software developer, mostly with Scala and Python, and
 operator/system engineer for satellite mission planning.  I contribute to ground
-systems of scientic satellite missions in my day job.
+systems of scientific satellite missions in my day job.
 
 Outside of my job, I dabble with Rust and fiddle with my Arch Linux systems.
 Sometimes I write about this here.
@@ -14,7 +14,7 @@ Sometimes I write about this here.
 ## What I enjoy
 
 - Bouldering, though I'm much worse than I'd like to be.
-- Riding my single speed bike through Munich and along the Isar river.
+- My single speed bike.
 - Books about history and philosophy.
 - The Disk World series by Terry Pratchett who passed away too early.  I love
   Nanny Ogg, Rincewind and Moist von Lipwig.
