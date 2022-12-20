@@ -1,8 +1,9 @@
 ---
 title: My Arch setup
 tags: [archlinux]
-last_modified_at: 2022-12-18T10:25:05Z
-redirect_from: /my-arch-setup/
+redirect_from: 
+  - /my-arch-setup/
+  - /2020/10/11/my-arch-setup.html
 ---
 
 **Note:** This setup has evolved since, and is no longer update to date.
