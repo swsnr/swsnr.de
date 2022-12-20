@@ -1,7 +1,7 @@
 ---
 title: Install Arch with Secure boot, TPM2-based LUKS encryption, and systemd-homed
 tags: ["archlinux", "systemd", "tpm2", "secureboot", "dracut", "luks", "sbctl"]
-last_modified_at: 2022-12-17T20:01:29Z
+last_modified_at: 2022-12-20T11:12:45Z
 redirect_from: /install-arch-with-secure-boot-tpm2-based-luks-encryption-and-systemd-homed/
 ---
 
@@ -129,7 +129,7 @@ $ reboot
 
 After reboot we can complete the system installation, by adding a desktop environment, applications, command line tools, etc.
 
-I like to automate this, and have two bash scripts in my [dotfiles](https://codeberg.org/flausch/dotfiles), one for boostrapping a new system from a live disk ([`arch/bootstrap-from-iso.bash`](https://codeberg.org/flausch/dotfiles/src/branch/main/arch/bootstrap-from-iso.bash)) and another one for installing everything after the initial bootstrapping ([`arch/install.base.bash`](https://codeberg.org/flausch/dotfiles/src/branch/main/arch/install.base.bash)).
+I like to automate this, and have two bash scripts in my [dotfiles](https://github.com/swsnr/dotfiles), one for boostrapping a new system from a live disk ([`arch/bootstrap-from-iso.bash`](https://github.com/swsnr/dotfiles/blob/6a25c4e0620068ecc6360fcbe1587eb14b622ac2/arch/bootstrap-from-iso.bash)) and another one for installing everything after the initial bootstrapping ([`arch/install.bash`](https://github.com/swsnr/dotfiles/blob/6a25c4e0620068ecc6360fcbe1587eb14b622ac2/arch/install.bash)).
 
 ### Create homed user
 
@@ -284,7 +284,7 @@ We could optimize this by putting `/home/` on a separate partition backed by dm-
 However, this has a few issues on its own, because dm-integrity has a few design issues and is and nowhere near LUKS/dm-crypt:
 
 * There’s no key management like LUKS for dm-crypt, meaning we can’t use passphrases or TPM2 keys for dm-integrity devices; instead we need a key file somewhere on disk.
-* Unlike LUKS/dm-crypt devices dm-integrity devices aren’t self-describing, because the superblock for dm-integrity doesn’t even contain the algorithm used (see <https://github.com/systemd/systemd/pull/20902#issuecomment-943198835>). We cannot mount a dm-integrity device without some extra configuration, and worse, getting the configuration wrong can silently corrupt the device.
+* Unlike LUKS/dm-crypt devices dm-integrity devices aren’t self-describing, because the superblock for dm-integrity doesn’t even contain the algorithm used (see <https://github.com/systemd/systemd/pull/20902). We cannot mount a dm-integrity device without some extra configuration, and worse, getting the configuration wrong can silently corrupt the device.
 * For these reasons, [DPS](https://systemd.io/DISCOVERABLE_PARTITIONS/) cannot and does not support dm-integrity partitions, so we need to configure the whole home partition mount, from dm-integrity up to `/etc/fstab`.
 
 ## Tooling issues

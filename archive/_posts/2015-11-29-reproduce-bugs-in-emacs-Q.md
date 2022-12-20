@@ -70,9 +70,9 @@ packages that you have installed.  What’s more you also enable us to reproduc
 the bug *ourselves* with just our package and a pure Emacs session, and if we
 can reproduce a bug [we are halfway to fixing it][good-reports].
 
-[good-reports]: http://geoff.greer.fm/2015/08/15/how-to-write-good-bug-reports/
+[good-reports]: https://geoff.greer.fm/2015/08/15/how-to-write-good-bug-reports/
 [exec-path-from-shell]: https://github.com/purcell/exec-path-from-shell
-[flycheck]: http://www.flycheck.org
+[flycheck]: https://www.flycheck.org
 
 [^fn-1]: There is also `emacs -q` which will make Emacs ignore your init file
     (e.g. `~/.emacs` or `~/.emacs.d/init.el`) and packages that you installed

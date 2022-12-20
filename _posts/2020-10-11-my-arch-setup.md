@@ -12,7 +12,7 @@ I like Arch Linux and use it for my systems whereever possible. In this post I�
 
 <!--more-->
 
-I try to automate as much as possible with [Ansible Playbooks](https://github.com/lunaryorn/dotfiles/tree/main/playbooks).
+I try to automate as much as possible with [Ansible Playbooks](https://github.com/swsnr/dotfiles/tree/9916a93e9a3cb23bd1c805fa3b364255d85a800c/playbooks).
 
 ## Partitioning and file systems
 
@@ -40,7 +40,7 @@ I always put a [GRML rescue system](https://wiki.archlinux.org/index.php/Systemd
 
 ## Snapshots and backups
 
-One particularly useful feature of btrfs is its ability to take readonly snapshots of any subvolume; this greatly helps backups and recovery. I always setup [snapper](http://snapper.io/), following [Arch’s excellent documentation](https://wiki.archlinux.org/index.php/Snapper). Snapper provides services and timers to automatically take hourly read-only snapshots of BTRFS subvolumes, and helps to manage these or restore previous snapshots.
+One particularly useful feature of btrfs is its ability to take readonly snapshots of any subvolume; this greatly helps backups and recovery. I always setup [snapper](https://github.com/openSUSE/snapper), following [Arch’s excellent documentation](https://wiki.archlinux.org/index.php/Snapper). Snapper provides services and timers to automatically take hourly read-only snapshots of BTRFS subvolumes, and helps to manage these or restore previous snapshots.
 
 For my root partition I use a configuration which keeps up to ten weekly snapshots, but I do not bother with monthly or even yearly snapshots:  If I messed up my system so bad that I had to go back an entire year I might just as well reinstall it right away. I only let snapper do hourly snapshots of rootfs because I can anyway, because rootfs does not frequently change. More important for rootfs is snappers ability to take "pre" and "post" snapshots around actions that modify the filesystem. I manually take such snapshots whenever I make "risky" changes to the system, and install [snap-pac](https://github.com/wesbarnett/snap-pac) to automatically take snapshots around pacman updates. This lets me roll back to the previous state of the system should a pacman update leave the system in a broken state.
 
