@@ -35,7 +35,7 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}
-      • {% github_edit_link "Edit on GitHub" %}
+      • <a href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}">Edit on GitHub</a>
     </p>
   </header>
 
