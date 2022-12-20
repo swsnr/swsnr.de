@@ -70,8 +70,8 @@ If you need to, you can still load the global site initialization *explicitly* f
 (load site-run-file 'no-error 'no-message)
 ```
 
-[--script]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Initial-Options.html#index-g_t_002d_002dscript-4535d
-[--batch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Initial-Options.html#index-g_t_002d_002dbatch-4534
+[--script]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Initial-Options.html
+[--batch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Initial-Options.html
 [srf]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Init-File.html#index-site_002drun_002dfile
 
 ## Processing command line arguments ##

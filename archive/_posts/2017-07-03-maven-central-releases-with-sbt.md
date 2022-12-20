@@ -4,10 +4,10 @@ tags: [scala]
 ---
 
 Coming from Haskell and Python I found releasing a Scala library a cumbersome process.
-The standard [Maven Central][] archive—[JCenter][] claims to be a more popular alternative, but all big projects appear to prefer the former—lacks a convenient web interface like that of Python’s package index or Haskell’s Hackage, and comprehensive documentation about publishing.
+The standard [Maven Central][] archive lacks a convenient web interface like that of Python’s package index or Haskell’s Hackage, and comprehensive documentation about publishing.
 Getting an artifact to Maven Central for the first time involves a surprising number of manual steps and a rather elaborate SBT configuration.
 
-In this article I hope to connect all the loose ends and offer a comprehensive step-by-step guide from nothing to a Maven Central release.
+In this article I hope to connect all the loose ends and offer a comprehensive stepby-step guide from nothing to a Maven Central release.
 I will start with some prerequisites which lie outside the scope of this article, guide you through the necessary bureaucracy and cover the setup.
 At the end I’ll introduce sbt-release, a powerful plugin to automate the entire release.
 
@@ -16,8 +16,7 @@ At the end I’ll introduce sbt-release, a powerful plugin to automate the entir
 I’d like to keep this article up to date as the process changes.
 If you find any outdated information in here please write a mail to [sebastian@swsnr.de](mailto:sebastian@swsnr.de) or mention me on [Twitter](https://twitter.com/lunaryorn).
 
-[Maven Central]: http://search.maven.org
-[JCenter]: https://bintray.com/bintray/jcenter
+[Maven Central]: https://search.maven.org
 
 <!--more-->
 
@@ -64,7 +63,7 @@ Groups avoid collisions in common names[^conflicts] and allow you to publish pat
 [^conflicts]: Such conflicts tend to produce strange results in languages that have no namespaces for artifacts.
     For instance a popular HTTP client library for the [Rust language][rust] goes by the name [reqwest][] (sic!) because someone else had already claimed the more obvious [request][] and did not offer the name to the HTTP client library that started later.
 
-[cats]: http://typelevel.org/cats/index.html
+[cats]: https://typelevel.org/cats/index.html
 [rust]: https://www.rust-lang.org/en-US/
 [reqwest]: https://crates.io/crates/reqwest
 [request]: https://crates.io/crates/request
@@ -81,7 +80,7 @@ If you do not own a domain but have a GitHub account you may use the domain of y
 For instance, my GitHub username “lunaryorn” gives me the GitHub pages domain “lunaryorn.github.io”, leading to my “GitHub” group ID `io.github.lunaryorn`.
 
 [acme]: https://en.wikipedia.org/wiki/Acme_Corporation
-[Typelevel]: http://typelevel.org/about.html
+[Typelevel]: https://typelevel.org/about/
 
 [^rdn]: Scala adopted this convention from the Java.
     Since domain names never conflict by definition this convention avoids conflicts in group IDs by design.
@@ -152,7 +151,7 @@ According to [Open Source Software Repository Hosting (OSSRH) Guide, Create a ti
 Sonatype warns you **not** to try and publish anything before the ticket enters the **Resolved** state.
 I do not know what happens if you do, but I presume you will need another round with Sonatype’s support if you do—better avoid it in the first place.
 
-[1]: http://central.sonatype.org/pages/ossrh-guide.html#create-a-ticket-with-sonatype
+[1]: https://central.sonatype.org/pages/ossrh-guide.html#create-a-ticket-with-sonatype
 
 ## Configure required metadata in SBT
 
@@ -194,7 +193,7 @@ scmInfo := Some(ScmInfo(
 Add this metadata to the `build.sbt` of your project.
 Without this metadata Maven Central will reject your artifacts when you try to publish.
 
-[2]: http://central.sonatype.org/pages/requirements.html#sufficient-metadata
+[2]: https://central.sonatype.org/pages/requirements.html#sufficient-metadata
 
 ## Configure publishing in SBT
 
@@ -371,8 +370,8 @@ The sbt-rig plugin bundles sbt-release and other plugins to offer a simple abstr
 [Justin Kaeser][jk] (@ on Twitter) just told me about [sbt-release-early][] which offers a simple approach to “Release Early, Release Often”.
 I find it interesting and think about trying it in my next project.
 
-[tp]: http://timperrett.com/who
-[cd]: http://timperrett.com/2016/10/02/continuous-delivery-for-scala-with-travisci/
+[tp]: https://timperrett.com/who
+[cd]: https://timperrett.com/2016/10/02/continuous-delivery-for-scala-with-travisci/
 [jk]: https://twitter.com/ebenwert
 [sbt-rig]: https://github.com/verizon/sbt-rig
 [sbt-release-early]: https://github.com/scalacenter/sbt-release-early
@@ -381,9 +380,9 @@ Sonatype’s own [OSSRH Guide][ossrh] documents publishing to Maven Central, alb
 I use it as reference but found it a poor introduction for new users.
 The SBT manual includes a guide to [Using Sonatype][] which covers the SBT setup in some detail but looses little words on the Sonatype bureaucracy.
 
-[ossrh]: http://central.sonatype.org/pages/ossrh-guide.html
-[Using Sonatype]: http://www.scala-sbt.org/release/docs/Using-Sonatype.html
+[ossrh]: https://central.sonatype.org/pages/ossrh-guide.html
+[Using Sonatype]: https://www.scala-sbt.org/release/docs/Using-Sonatype.html
 
 The official [SBT documentation][sbt-doc] improved a lot and has now become a great resource to learn and to understand SBT.
 
-[sbt-doc]: http://www.scala-sbt.org/1.x/docs/index.html
+[sbt-doc]: https://www.scala-sbt.org/1.x/docs/index.html

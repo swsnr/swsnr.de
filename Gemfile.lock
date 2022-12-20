@@ -6,14 +6,6 @@ GIT
       jekyll (>= 3.3, < 5.0)
 
 GIT
-  remote: https://github.com/jekyll/github-metadata.git
-  revision: 2c1b5591a61bf18fc604112896479f72c102e3e2
-  specs:
-    jekyll-github-metadata (2.15.0)
-      jekyll (>= 3.4, < 5.0)
-      octokit (~> 4.0, != 4.4.0)
-
-GIT
   remote: https://github.com/jekyll/jekyll-sass-converter.git
   revision: 3b0d92059b4e2764b0d2c25f155373e92733c013
   specs:
@@ -39,14 +31,21 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    ethon (0.16.0)
+      ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    faraday (2.7.2)
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     google-protobuf (3.21.12-x86_64-linux)
+    html-proofer (4.4.3)
+      addressable (~> 2.3)
+      mercenary (~> 0.3)
+      nokogiri (~> 1.13)
+      parallel (~> 1.10)
+      rainbow (~> 3.0)
+      typhoeus (~> 1.3)
+      yell (~> 2.0)
+      zeitwerk (~> 2.5)
     http_parser.rb (0.8.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -87,37 +86,39 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    octokit (4.25.1)
-      faraday (>= 1, < 3)
-      sawyer (~> 0.9)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
+    parallel (1.22.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (5.0.1)
+    racc (1.6.1)
+    rainbow (3.1.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (4.0.0)
-    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
     sass-embedded (1.56.2-x86_64-linux-gnu)
       google-protobuf (~> 3.21)
-    sawyer (0.9.2)
-      addressable (>= 2.3.5)
-      faraday (>= 0.17.3, < 3)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     unicode-display_width (2.3.0)
     webrick (1.7.0)
+    yell (2.2.2)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  html-proofer
   jekyll
   jekyll-default-layout
   jekyll-feed
-  jekyll-github-metadata!
   jekyll-redirect-from
   jekyll-relative-links!
   jekyll-sass-converter!

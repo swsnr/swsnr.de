@@ -10,12 +10,11 @@ which is less good and supports less languages than the Python library
 [Pygments][], the de-facto standard highlighter used by Github and others.
 
 It's easy to implement custom highlighting thanks to the great API of Pandoc,
-with just two functions in [**Text.Highlighting.Pygments.Pandoc**][thpp]:
+with just two functions in **Text.Highlighting.Pygments.Pandoc**:
 
-[pandoc]: http://johnmacfarlane.net/pandoc/
-[highlighting-kate]: http://hackage.haskell.org/package/highlighting-kate
-[pygments]: http://pygments.org/
-[thpp]: https://github.com/lunaryorn/blog/blob/f9c1c518bb140d25a49ca2592d8664a43c67ff6f/src/Text/Highlighting/Pygments/Pandoc.hs
+[pandoc]: https://johnmacfarlane.net/pandoc/
+[highlighting-kate]: https://hackage.haskell.org/package/highlighting-kate
+[pygments]: https://pygments.org/
 
 <!--more-->
 
@@ -47,11 +46,11 @@ implement with just a few lines it also slows down the build considerably.
 Last weekend I sat down and tried to call Pygments directly via Python's C API
 through Haskell's FFI.  This is what came out of this adventure.
 
-[pygmentize]: http://pygments.org/docs/cmdline/
+[pygmentize]: https://pygments.org/docs/cmdline/
 
 ## Native wrappers ##
 
-[**Foreign.Python.Native**][fpn] is an [hsc2hs][] module which imports the
+**Foreign.Python.Native** is an [hsc2hs][] module which imports the
 required functions from Python's C API and declares corresponding Haskell
 signatures.
 
@@ -81,12 +80,11 @@ GHC automatically generates a wrapper C functions for these macros, and figures
 out whether to link `PyUnicodeUCS2_AsUTF8String` or
 `PyUnicodeUCS4_AsUTF8String`.
 
-[fpn]: https://github.com/lunaryorn/blog/blob/e0d3faa6d95cb567d7356dec902575691051b5a5/src/Foreign/Python/Native.hsc
-[hsc2hs]: http://www.haskell.org/ghc/docs/7.6.3/html/users_guide/hsc2hs.html
+[hsc2hs]: https://www.haskell.org/ghc/docs/7.6.3/html/users_guide/hsc2hs.html
 
 ## Convenient Haskell API ##
 
-[**Foreign.Python**][fp] is the convenient Haskell API around the
+**Foreign.Python** is the convenient Haskell API around the
 [native Python functions](#native-wrappers).
 
 ----
@@ -203,11 +201,9 @@ instance Object String where
     liftM UTF8.toString (fromPy s)
 ```
 
-[fp]: https://github.com/lunaryorn/blog/blob/e0d3faa6d95cb567d7356dec902575691051b5a5/src/Foreign/Python.hs
-
 ## Pygments interface ##
 
-[**Text.Highlighting.Pygments**][thp] is the Pygments interface that builds upon
+**Text.Highlighting.Pygments** is the Pygments interface that builds upon
 this [Python API](#convenient-haskell-api).
 
 I start with some type aliases for Pygments types.  They don't add more type
@@ -286,11 +282,9 @@ Then it gets the lexer object, and passes these objects and the code to
 `highlight`.  The result is a string containing HTML to highlight the given
 `code`.
 
-[thp]: https://github.com/lunaryorn/blog/blob/36bef7de1a7914fa4bffdd28800dbd01f6ca719a/src/Text/Highlighting/Pygments.hs
-
 ## Building ##
 
-I use Cabal to build these modules.  The corresponding [cabal file][] is simple:
+I use Cabal to build these modules.  The corresponding cabal file is simple:
 
 ```
 executable lunarsite
@@ -324,8 +318,6 @@ directory.
 On other systems I just rely on Cabal's built-in support for `pkg-config` to
 automatically find the library name and the include directories for Python 2.7.
 
-[cabal file]: https://github.com/lunaryorn/blog/blob/306c891845311a8a4e424cabfade4db07318c603/lunarsite.cabal
-
 ## Lessons learned ##
 
 Calling Python from Haskell was much, much easier than I thought, thanks to
@@ -344,14 +336,12 @@ return values.
 
 And since Haskell doesn't support foreign varargs functions, I often had to
 manually assemble complex Python objects such as argument tuples using the
-lower-level API, instead of just calling [`Py_BuildValue`][pbv] to build complex
+lower-level API, instead of just calling `Py_BuildValue` to build complex
 Python objects from C values directly.
 
 Despite these minor nuisances working with Haskell's FFI has been a really
 pleasant experience so far, and I'm truly surprised that a language which is
 generally renowned for its advancement of computer science also excels at the
 dirty low-level task of calling C libraries.
-
-[pbv]: https://docs.python.org/2/c-api/arg.html#Py_BuildValue
 
 [hakyll]: https://jaspervdj.be/hakyll/

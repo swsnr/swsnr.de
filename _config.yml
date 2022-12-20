@@ -2,7 +2,7 @@ title: Basti
 description: >-
   Scala software developer. System engineer satellite mission planning. Rust. Arch.
 repository: swsnr/swsnr.de
-# url gets set by github metadata plugin
+url: 'https://swsnr.de'
 excerpt_separator: "<!--more-->"
 show_excerpts: true
 timezone: UTC

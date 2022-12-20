@@ -44,8 +44,8 @@ else to make it load fast.  Emacs calls such files "autoload files".
 
 Maintaining autoload files manually to keep them in sync with the actual
 definitions in the library file is tiresome and error-prone so Emacs allows to
-automate this process with [update-file-autoloads][ufa] and
-[update-directory-autoloads][uda].
+automate this process with `update-file-autoloads` and
+`update-directory-autoloads`.
 
 `update-file-autoloads` inspects the source files for special comments called
 “autoload cookies”.  These cookies let you declare autoloads right at the
@@ -72,9 +72,6 @@ If an autoload cookie occurs on an expression with no special support for
 autoloading, `update-file-autoloads` copies the expression verbatim.  This is
 used to register libraries in specific Emacs extension points, like
 `auto-modes-alist`.
-
-[ufa]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html#index-update_002dfile_002dautoloads
-[uda]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html#index-update_002ddirectory_002dautoloads
 
 ## Package autoloads ##
 

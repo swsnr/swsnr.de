@@ -6,7 +6,6 @@ gem 'minima', git: "https://github.com/jekyll/minima.git"
 group :jekyll_plugins do
   gem 'jekyll-sass-converter', git: "https://github.com/jekyll/jekyll-sass-converter.git"
   gem "jekyll-seo-tag"
-  gem "jekyll-github-metadata", git: "https://github.com/jekyll/github-metadata.git"
   gem "jekyll-redirect-from"
   gem "jekyll-feed"
   gem "jekyll-sitemap"
@@ -15,3 +14,5 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.7"
+
+gem "html-proofer"

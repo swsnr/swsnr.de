@@ -1,8 +1,8 @@
 ---
 title: Secure boot on Arch Linux with sbctl and dracut
 tags: ["archlinux", "secureboot", "dracut", "sbctl"]
-last_modified_at: 2022-01-06T16:52:25+00:00
-redirect_from: /secure-boot-on-arch-linux-with-sbctl-and-dracut/
+last_modified_at: 2022-12-20T11:12:45Z
+jedirect_from: /secure-boot-on-arch-linux-with-sbctl-and-dracut/
 ---
 
 I started playing around with secure boot, with the ultimately goal of setting it up on my laptop. I experimented in a libvirt/qemu VM and to my surprise a custom secure boot setup is rather easy (the [Secure Boot](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface/Secure_Boot#Manual_process) page on the Arch Wiki suggests quite the contrary), thanks to dracut and a fairly recent tool named `sbctl` which just recently had it’s first release.
@@ -189,6 +189,6 @@ The firmware now prohibits booting the unsigned kernel, but allows the signed ke
 
 ## Open points
 
-Dracut automates signing kernel images ([dracut-hook-uefi-systemd](https://aur.archlinux.org/packages/dracut-hook-uefi-systemd/) automatically invokes dracut when installing or updating kernel images through pacman), but ensuring proper signatures on the bootloader itself even across updates presents an open issue; ideally there should be some way to call `sbctl sign-all` automatically after `bootctl`.
+Dracut automates signing kernel images ([dracut-hook-uefi](https://aur.archlinux.org/packages/dracut-hook-uefi) automatically invokes dracut when installing or updating kernel images through pacman), but ensuring proper signatures on the bootloader itself even across updates presents an open issue; ideally there should be some way to call `sbctl sign-all` automatically after `bootctl`.
 
 `sbctl` is also a rather new project, which published a first 0.1 only recently; it remains to be seen how sustainable the project is (I dearly hope it is since it provides a huge improvement over the state of the art secure-boot tooling).
