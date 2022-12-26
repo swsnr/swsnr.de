@@ -32,8 +32,6 @@ header_pages: [privacy.md, colophon.md]
 minima:
   skin: swsnr
   social_links:
-    - platform: rss
-      user_url: https://swsnr.de/feed.xml
     - platform: github
       user_url: https://github.com/swsnr
     - platform: matrix
