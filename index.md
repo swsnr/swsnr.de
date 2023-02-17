@@ -22,7 +22,7 @@ Sometimes I write about this here.
   once in my life time, and I still enjoy the Gothic series.
 - Playing AAA games sometimes.  Witcher 3 is an all time favorite; the central
   quest of the Heart of Stone expansion is _the single best thing_ I ever saw in
-  a video came.
+  a video game.
 - Writing Rust code; the language and its tooling just do so many things right
   in my opinion.
 - Arch Linux, because it's simple to set up, never gets in my way, and has a
