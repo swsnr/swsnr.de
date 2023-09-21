@@ -13,9 +13,6 @@ At the end I’ll introduce sbt-release, a powerful plugin to automate the entir
 
 <!--more-->
 
-I’d like to keep this article up to date as the process changes.
-If you find any outdated information in here please write a mail to [sebastian@swsnr.de](mailto:sebastian@swsnr.de) or mention me on [Twitter](https://twitter.com/lunaryorn).
-
 [Maven Central]: https://search.maven.org
 
 <!--more-->
@@ -367,12 +364,11 @@ The [refined][] library for instance defines custom steps to update the changelo
 
 [Timothy Perrett][tp] wrote about his [continuous delivery][cd] approach where he uses the [sbt-rig][] plugin to release every single commit on `master`.
 The sbt-rig plugin bundles sbt-release and other plugins to offer a simple abstraction over releases.
-[Justin Kaeser][jk] (@ on Twitter) just told me about [sbt-release-early][] which offers a simple approach to “Release Early, Release Often”.
+Justin Kaeser just told me about [sbt-release-early][] which offers a simple approach to “Release Early, Release Often”.
 I find it interesting and think about trying it in my next project.
 
 [tp]: https://timperrett.com/who
 [cd]: https://timperrett.com/2016/10/02/continuous-delivery-for-scala-with-travisci/
-[jk]: https://twitter.com/ebenwert
 [sbt-rig]: https://github.com/verizon/sbt-rig
 [sbt-release-early]: https://github.com/scalacenter/sbt-release-early
 
