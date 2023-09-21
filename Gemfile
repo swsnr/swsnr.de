@@ -1,10 +1,8 @@
 source "https://rubygems.org"
 
 gem 'jekyll'
-gem 'minima', git: "https://github.com/jekyll/minima.git"
 
 group :jekyll_plugins do
-  gem 'jekyll-sass-converter', git: "https://github.com/jekyll/jekyll-sass-converter.git"
   gem "jekyll-seo-tag"
   gem "jekyll-redirect-from"
   gem "jekyll-feed"
