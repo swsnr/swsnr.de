@@ -1,0 +1,17 @@
+html {
+  font-family: Vollkorn, serif;
+}
+
+body {
+  padding: 10px;
+}
+
+body > footer {
+  font-size: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
