@@ -27,11 +27,11 @@ jobs:
         #   HTML (it's evaluated by Javascript apparently).
         # - LinkedIn URLs, because Linkedin doesn't like the HTML Proofer user
         #   agent
-        # - Github Documentation pages, because they for some reason return 403?
+        # - Github pages, because they for some reason return 403?
         # - Edit pages for drafts which don't exist on main
         run: >
           bundle exec htmlproofer
-          --ignore-urls 'https://aur.archlinux.org/account/swsnr,/www.linkedin.com\/in\//,/matrix.to\/#\//,/(help|docs).github.com/,/edit\/main\/_drafts\//'
+          --ignore-urls 'https://aur.archlinux.org/account/swsnr,/www.linkedin.com\/in\//,/matrix.to\/#\//,/github.com/,/edit\/main\/_drafts\//'
           --swap-urls '^https\://swsnr.de/:/'
           _site
       - name: Check site
