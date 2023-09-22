@@ -13,11 +13,10 @@ layout: base
 
   {% assign posts = site.posts %}
   {%- assign date_format = "%b %-d, %Y" -%}
-
   <ul>
     {%- for post in posts -%}
     {%- if post.categories contains 'archive' -%}{%- continue -%}{%- endif -%}
-    <li><a href="{{ post.url | relative_url }}">{{ post.date | date: date_format}}: {{ post.title | escape }}</a></li>
+    <li><strong>{{ post.date | date: date_format }}</strong>: <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
     {%- endfor -%}
   </ul>
 
