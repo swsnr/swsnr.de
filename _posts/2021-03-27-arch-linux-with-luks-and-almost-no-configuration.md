@@ -1,9 +1,9 @@
 ---
-title: Arch Linux with LUKS and (almost) no configuration
 tags: ["systemd", "luks", "dracut", "archlinux"]
 last_modified_at: 2022-01-01T19:54:00+00:00
-redirect_from: /arch-linux-with-luks-and-almost-no-configuration/
 ---
+
+# Arch Linux with LUKS and (almost) no configuration
 
 Installing Arch on a LUKS-encrypted dsik traditionally required a few careful configuration steps to configure the proper root device for booting; if any of these steps was omitted or done wrongly the system would fail to boot. With systemd and dracut however a LUKS-encrypted Arch system can boot safely and reliably without any configuration:
 
@@ -18,10 +18,10 @@ The following commands demonstrate a fresh Arch installation from the Arch insta
 ## Prepare the disk
 
 ```console
-$ sgdisk 
-    -n1:0:+500M  -t1:ef00 -c1:EFISYSTEM 
-    -n2:0:+1000M -t2:ea00 -c2:XBOOTLDR 
-    -N3          -t3:8304 -c3:linux 
+$ sgdisk
+    -n1:0:+500M  -t1:ef00 -c1:EFISYSTEM
+    -n2:0:+1000M -t2:ea00 -c2:XBOOTLDR
+    -N3          -t3:8304 -c3:linux
     /dev/vda
 $ mkfs.fat -F32 -n EFISYSTEM /dev/disk/by-partlabel/EFISYSTEM
 $ mkfs.fat -F32 -n XBOOTLDR /dev/disk/by-partlabel/XBOOTLDR

@@ -1,9 +1,9 @@
 ---
-title: Install Arch with Secure boot, TPM2-based LUKS encryption, and systemd-homed
 tags: ["archlinux", "systemd", "tpm2", "secureboot", "dracut", "luks", "sbctl"]
 last_modified_at: 2022-12-23T20:49:43Z
-redirect_from: /install-arch-with-secure-boot-tpm2-based-luks-encryption-and-systemd-homed/
 ---
+
+# Install Arch with Secure boot, TPM2-based LUKS encryption, and systemd-homed
 
 **Update:** I no longer use `dracut`, and the corresponding part of this blog
 post no longer reflects my setup.

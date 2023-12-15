@@ -1,9 +1,9 @@
 ---
-title: Unlock LUKS rootfs with TPM2 key
 tags: ["dracut", "luks", "sbctl", "archlinux", "systemd", "tpm2", "secureboot"]
 last_modified_at: 2022-01-06T16:51:56+00:00
-redirect_from: /unlock-luks-rootfs-with-tpm2-key/
 ---
+
+# Unlock LUKS rootfs with TPM2 key
 
 Historically cryptsetup and LUKS only supported good old passwords; however recent systemd versions extend cryptsetup with [additional key types](https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html) such as FIDO tokens and TPM devices.
 
@@ -21,14 +21,14 @@ Check that the system supports TPM2:
 
 ```console
 $ systemd-cryptenroll --tpm2-device=list
-PATH        DEVICE      DRIVER 
+PATH        DEVICE      DRIVER
 /dev/tpmrm0 MSFT0101:00 tpm_crb
 ```
 
 Then enroll a new TPM2 key (use the appropriate block device path of course):
 
 ```console
-$ systemd-cryptenroll --tpm2-device=auto /dev/disk/by-partlabel/linux 
+$ systemd-cryptenroll --tpm2-device=auto /dev/disk/by-partlabel/linux
 New TPM2 token enrolled as key slot 1.
 ```
 
@@ -36,7 +36,7 @@ Then add recovery key:
 
 ```console
 $ systemd-cryptenroll --recovery-key  /dev/disk/by-partlabel/linux
-🔐 Please enter current passphrase for disk /dev/disk/by-partlabel/linux: 
+🔐 Please enter current passphrase for disk /dev/disk/by-partlabel/linux:
 A secret recovery key has been generated for this volume:
 
     🔐 efcfbdlt-rhkdjjul-inbhbvhi-nfkvbbbv-didjbjel-butkrrig-ugbrivdd-evnkkkgn

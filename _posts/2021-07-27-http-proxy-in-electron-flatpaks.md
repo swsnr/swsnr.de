@@ -1,9 +1,9 @@
 ---
-title: HTTP Proxy in Electron flatpaks
 tags: ["flatpak"]
 last_modified_at: 2021-07-27T09:55:41+00:00
-redirect_from: /http-proxy-in-electron-flatpaks/
 ---
+
+# HTTP Proxy in Electron flatpaks
 
 Some electron-based flatpaks (e.g. Mattermost, see <https://github.com/flathub/com.mattermost.Desktop/issues/23>) for some reason ignore Gnome’s HTTP proxy settings. In this case we can set the proxy directly inside the affected flatpak.
 
@@ -21,7 +21,7 @@ In this shell we can set the corresponding Gnome settings with the `gsettings` u
 $ settings set org.gnome.system.proxy mode manual
 $ gsettings set org.gnome.system.proxy.http host REDACTED
 $ gsettings set org.gnome.system.proxy.http port REDACTED
-$ gsettings set org.gnome.system.proxy.https host REDACTED 
+$ gsettings set org.gnome.system.proxy.https host REDACTED
 $ gsettings set org.gnome.system.proxy.https port REDACTED
 ```
 

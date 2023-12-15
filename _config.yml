@@ -1,19 +1,25 @@
-title: Basti
+title: Sebastian Wiesner
 description: >-
-  Scala software developer. System engineer satellite mission planning. Rust. Arch.
+  System engineer for satellite mission planning. Gnome. Rust. Arch.
 repository: swsnr/swsnr.de
-url: 'https://swsnr.de'
+url: "https://swsnr.de"
 excerpt_separator: "<!--more-->"
 show_excerpts: true
 timezone: UTC
-permalink: date
+permalink: /:slug
+theme: minima
 
 author:
-  name: Basti
+  name: Sebastian Wiesner
   email: sebastian@swsnr.de
 
 relative_links:
-  enabled:     true
+  enabled: true
+  collections: true
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
   collections: true
 
 feed:
