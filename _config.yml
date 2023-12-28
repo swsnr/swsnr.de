@@ -27,7 +27,7 @@ header_pages:
   - privacy.md
 
 minima:
-  skin: auto
+  skin: swsnr-auto
   social_links:
     - platform: github
       user_url: "https://github.com/swsnr"

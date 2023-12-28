@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import "gnome-palette";
+
+// Light mode
+// ----------
+
+$lm-brand-color:           $purple_3;
+$lm-brand-color-light:     $purple_1;
+$lm-brand-color-dark:      $purple_4;
+
+$lm-site-title-color:      $lm-brand-color-dark;
+
+$lm-text-color:            transparentize(black, .2);
+$lm-background-color:      #fafafa;
+$lm-code-background-color: #fafafa;
+
+$lm-link-base-color:       $blue_3;
+$lm-link-visited-color:    $blue_4;
+$lm-link-hover-color:      $blue_1;
+
+$lm-border-color-01:       $lm-brand-color-light;
+$lm-border-color-02:       $lm-brand-color;
+$lm-border-color-03:       $lm-brand-color-dark;
+
+$lm-table-text-color:      $lm-text-color;
+$lm-table-zebra-color:     $lm-brand-color-light;
+$lm-table-header-bg-color: $lm-brand-color;
+$lm-table-header-border:   $lm-brand-color-light;
+$lm-table-border-color:    $lm-border-color-01;
+
+// Dark mode
+// ---------
+
+$dm-brand-color:           $purple_3;
+$dm-brand-color-light:     $purple_2;
+$dm-brand-color-dark:      $purple_5;
+
+$dm-site-title-color:      $dm-brand-color-light;
+
+$dm-text-color:            white;
+$dm-background-color:      #242424;
+$dm-code-background-color: #242424;
+
+$dm-link-base-color:       $blue_3;
+$dm-link-visited-color:    $blue_4;
+$dm-link-hover-color:      $blue_2;
+
+$dm-border-color-01:       $dm-brand-color-dark;
+$dm-border-color-02:       $dm-brand-color;
+$dm-border-color-03:       $dm-brand-color-light;
+
+$dm-table-text-color:      $dm-text-color;
+$dm-table-zebra-color:     $dm-brand-color-light;
+$dm-table-header-bg-color: $dm-brand-color;
+$dm-table-header-border:   $dm-brand-color-light;
+$dm-table-border-color:    $dm-border-color-01;
+
+
+@import "minima/skins/auto";
