@@ -1,8 +1,3 @@
----
-tags: ["flatpak"]
-last_modified_at: 2021-07-27T09:55:41+00:00
----
-
 # HTTP Proxy in Electron flatpaks
 
 Some electron-based flatpaks (e.g. Mattermost, see <https://github.com/flathub/com.mattermost.Desktop/issues/23>) for some reason ignore Gnome’s HTTP proxy settings. In this case we can set the proxy directly inside the affected flatpak.

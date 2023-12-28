@@ -1,8 +1,4 @@
----
-title: "Emacs script pitfalls"
-tags: [emacs]
-redirect_from: /2014/08/12/emacs-script-pitfalls.html
----
+# Emacs script pitfalls
 
 Emacs isn't just an editor, it’s an entire Emacs Lisp interpreter and
 environment.  We can use Emacs Lisp not only to extend and customize our beloved editor, but also to write entire programs and applications.  Nic Ferrier’s [elnode][] server is the most ambitious Emacs Lisp application of this sort, but we can start at a smaller scale and try to write our shell scripts and tools

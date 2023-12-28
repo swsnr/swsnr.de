@@ -1,7 +1,4 @@
----
-title: "Autoloads in Emacs Lisp"
-tags: [emacs]
----
+# Autoloads in Emacs Lisp
 
 Emacs Lisp offers an [autoloading mechanism][autoload] to load libraries on
 demand.  Typically this is used to make interactive commands available to the

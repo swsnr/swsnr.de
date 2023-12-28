@@ -1,7 +1,4 @@
----
-title: "Maven Central Releases with SBT"
-tags: [scala]
----
+# Maven Central Releases with SBT
 
 Coming from Haskell and Python I found releasing a Scala library a cumbersome process.
 The standard [Maven Central][] archive lacks a convenient web interface like that of Python’s package index or Haskell’s Hackage, and comprehensive documentation about publishing.

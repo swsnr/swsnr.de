@@ -1,7 +1,4 @@
----
-title: "Calling Python from Haskell"
-tags: [haskell, python]
----
+# Calling Python from Haskell
 
 In a past version of this blog I used [Pandoc][] to convert Markdown to HTML.
 It's by far the best and most powerful markdown converter, but it has one,

@@ -1,8 +1,3 @@
----
-tags: ["archlinux", "secureboot", "dracut", "sbctl"]
-last_modified_at: 2022-12-20T11:12:45Z
----
-
 # Secure boot on Arch Linux with sbctl and dracut
 
 I started playing around with secure boot, with the ultimately goal of setting it up on my laptop. I experimented in a libvirt/qemu VM and to my surprise a custom secure boot setup is rather easy (the [Secure Boot](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface/Secure_Boot#Manual_process) page on the Arch Wiki suggests quite the contrary), thanks to dracut and a fairly recent tool named `sbctl` which just recently had it’s first release.

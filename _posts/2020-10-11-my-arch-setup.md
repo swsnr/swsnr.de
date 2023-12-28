@@ -1,10 +1,4 @@
----
-title: My Arch setup
-tags: [archlinux]
-redirect_from: 
-  - /my-arch-setup/
-  - /2020/10/11/my-arch-setup.html
----
+# My Arch setup
 
 **Note:** This setup has evolved since, and is no longer update to date.
 I no longer use a GRML rescue system or a separate `/home`, I use flatpak a lot these days, and make my backups with restic.

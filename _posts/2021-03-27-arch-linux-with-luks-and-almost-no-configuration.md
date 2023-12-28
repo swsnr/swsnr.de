@@ -1,8 +1,3 @@
----
-tags: ["systemd", "luks", "dracut", "archlinux"]
-last_modified_at: 2022-01-01T19:54:00+00:00
----
-
 # Arch Linux with LUKS and (almost) no configuration
 
 Installing Arch on a LUKS-encrypted dsik traditionally required a few careful configuration steps to configure the proper root device for booting; if any of these steps was omitted or done wrongly the system would fail to boot. With systemd and dracut however a LUKS-encrypted Arch system can boot safely and reliably without any configuration:

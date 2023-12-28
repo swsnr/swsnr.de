@@ -1,7 +1,4 @@
----
-title: "Reproduce bugs in emacs -Q"
-tags: [emacs]
----
+# Reproduce bugs in emacs -Q
 
 > Please reproduce this issue in `emacs -Q`.
 
