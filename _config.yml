@@ -38,7 +38,9 @@ minima:
       user_url: "https://www.linkedin.com/in/swsnr/"
 
 feed:
-  tags: true
+  categories:
+    - archlinux
+    - gnome
 
 markdown: kramdown
 kramdown:
