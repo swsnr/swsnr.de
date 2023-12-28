@@ -26,6 +26,11 @@ header_pages:
   - colophon.md
   - privacy.md
 
+disqus:
+  # We're overriding the disqus theme to use a different commenting solution,
+  # so we just use any truthy value here to make minima include the comment template.
+  shortname: true
+
 minima:
   skin: swsnr-auto
   social_links:
