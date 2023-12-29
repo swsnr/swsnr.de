@@ -34,6 +34,7 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
+    commonmarker (0.23.10)
     concurrent-ruby (1.2.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -61,6 +62,8 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-commonmark (1.4.0)
+      commonmarker (~> 0.22)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.17.0)
@@ -105,6 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-commonmark
   jekyll-compose
   jekyll-default-layout!
   jekyll-feed

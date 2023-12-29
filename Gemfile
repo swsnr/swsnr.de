@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings', git: "https://github.com/benbalter/jekyll-titles-from-headings.git"
   gem "jekyll-relative-links", git: "https://github.com/benbalter/jekyll-relative-links.git"
   gem "jekyll-compose"
+  gem "jekyll-commonmark"
   gem "minima", git: "https://github.com/jekyll/minima.git"
 end
 

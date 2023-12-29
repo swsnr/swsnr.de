@@ -64,15 +64,7 @@ feed:
     - archlinux
     - gnome
 
-markdown: kramdown
-kramdown:
-  # We use GFM to support fenced code blocks and strike-through, see
-  # https://github.com/kramdown/parser-gfm
-  input: GFM
-  # Disable hard wrapping as used on Github.
-  hard_wrap: false
-  # Don't automatically substitute typographic characters, we can type proper
-  # unicode alright.
-  gfm_quirks: [no_auto_typographic]
-  auto_id_stripping: true
-  smart_quotes: ["apos", "apos", "quot", "quot"]
+markdown: CommonMark
+commonmark:
+  options: [FOOTNOTES, UNSAFE]
+  extensions: [table, autolink, strikethrough]
