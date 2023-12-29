@@ -1,3 +1,4 @@
+{%- if page.comments != false and jekyll.environment == "production" -%}
 <script src="https://giscus.app/client.js"
         data-repo="swsnr/swsnr.de"
         data-repo-id="R_kgDOIofjKw"
@@ -15,3 +16,5 @@
         async>
 </script>
 <div class="giscus"></div>
+<noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+{%- endif -%}
