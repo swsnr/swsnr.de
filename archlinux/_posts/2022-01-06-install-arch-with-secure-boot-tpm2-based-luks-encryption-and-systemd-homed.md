@@ -5,7 +5,7 @@ post no longer reflects my setup.
 
 This article describes my Arch Linux setup which combines Secure Boot with custom keys, TPM2-based full disk encryption and systemd-homed into a fully encrypted and authenticated, yet convenient Linux system.
 
-This setup draws inspiration from [Authenticated Boot and Disk Encryption on Linux](https://0pointer.net/blog/authenticated-boot-and-disk-encryption-on-linux.html) and [Unlocking LUKS2 volumes with TPM2, FIDO2, PKCS#11 Security Hardware on systemd 248](https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html) by Lennart Poettering, and combines my previous posts [Unlock LUKS rootfs with TPM2 key](2021-12-27-unlock-luks-rootfs-with-tpm2-key.md), [Secure boot on Arch Linux with sbctl and dracut](2021-04-01-secure-boot-on-arch-linux-with-sbctl-and-dracut.md), and [Arch Linux with LUKS and (almost) no configuration](2021-03-27-arch-linux-with-luks-and-almost-no-configuration.md).
+This setup draws inspiration from [Authenticated Boot and Disk Encryption on Linux](https://0pointer.net/blog/authenticated-boot-and-disk-encryption-on-linux.html) and [Unlocking LUKS2 volumes with TPM2, FIDO2, PKCS#11 Security Hardware on systemd 248](https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html) by Lennart Poettering, and combines my previous posts [Unlock LUKS rootfs with TPM2 key](./2021-12-27-unlock-luks-rootfs-with-tpm2-key.md), [Secure boot on Arch Linux with sbctl and dracut](./2021-04-01-secure-boot-on-arch-linux-with-sbctl-and-dracut.md), and [Arch Linux with LUKS and (almost) no configuration](./2021-03-27-arch-linux-with-luks-and-almost-no-configuration.md).
 
 <!--more-->
 
@@ -152,7 +152,7 @@ $ homectl resize foo 50G
 We can also add some additional metadata to the user account:
 
 ```console
-homectl update foo --real-name 'Foo' --email-address foo@example.org --language en_GB.UTF-8 --member-of wheel
+$ homectl update foo --real-name 'Foo' --email-address foo@example.org --language en_GB.UTF-8 --member-of wheel
 ```
 
 `man homectl` provides a complete list of flags; in particular it also offers support for various kinds of security tokens (e.g. FIDO2) for user authentication, provides plenty of means for resource accounting (e.g. memory consumption) for the user account, and supports different kinds of password policies.
@@ -160,7 +160,7 @@ homectl update foo --real-name 'Foo' --email-address foo@example.org --language 
 Finally we may run into systemd issues with home areas on btrfs (see below); if login fails with a “Operation on home failed: Not enough disk space for home” message we need to enable LUKS discard:
 
 ```console
-homectl update foo --luks-discard=true
+$ homectl update foo --luks-discard=true
 ```
 
 This flag is not safe (heed the warning in `man homectl`), but until systemd improves its behaviour on btrfs we have no choice unfortunately.
