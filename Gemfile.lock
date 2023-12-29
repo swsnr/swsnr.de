@@ -1,8 +1,22 @@
 GIT
+  remote: https://github.com/benbalter/jekyll-default-layout.git
+  revision: 340343a2ab7b1b18a45ff7c26f2937db5d28f7b5
+  specs:
+    jekyll-default-layout (0.1.5)
+      jekyll (>= 3.0, < 5.0)
+
+GIT
   remote: https://github.com/benbalter/jekyll-relative-links.git
   revision: 9f05f8524cd974fc151d0d960ae3ad2e4935d3c6
   specs:
     jekyll-relative-links (0.7.0)
+      jekyll (>= 3.3, < 5.0)
+
+GIT
+  remote: https://github.com/benbalter/jekyll-titles-from-headings.git
+  revision: bf7a451380bddf6f4bc674600f00c1ef61e29a73
+  specs:
+    jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
 
 GIT
@@ -49,8 +63,6 @@ GEM
       webrick (~> 1.7)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-default-layout (0.1.5)
-      jekyll (>= 3.0, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-redirect-from (0.16.0)
@@ -61,8 +73,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-titles-from-headings (0.5.3)
-      jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -83,8 +93,8 @@ GEM
     rexml (3.2.6)
     rouge (4.2.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.69.5-x86_64-linux-gnu)
-      google-protobuf (~> 3.23)
+    sass-embedded (1.69.6-x86_64-linux-gnu)
+      google-protobuf (~> 3.25)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.5.0)
@@ -96,15 +106,15 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-compose
-  jekyll-default-layout
+  jekyll-default-layout!
   jekyll-feed
   jekyll-redirect-from
   jekyll-relative-links!
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-titles-from-headings
+  jekyll-titles-from-headings!
   minima!
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.3.25
+   2.4.10
