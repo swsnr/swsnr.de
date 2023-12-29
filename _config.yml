@@ -9,6 +9,9 @@ timezone: UTC
 permalink: /:slug
 theme: minima
 
+include:
+  - .well-known
+
 # See https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 author:
   name: Sebastian Wiesner
