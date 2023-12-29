@@ -9,30 +9,45 @@ timezone: UTC
 permalink: /:slug
 theme: minima
 
+# See https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 author:
   name: Sebastian Wiesner
   email: sebastian@swsnr.de
+logo: /assets/avatar.jpg
+social:
+  name: Sebastian Wiesner
+  links:
+    - https://github.com/swsnr
+    - https://mastodon.social/@swsnr
+    - https://matrix.to/#/@swsnr:matrix.org
+    - https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
+# See https://github.com/benbalter/jekyll-relative-links#configuration
 relative_links:
   enabled: true
+  # Required to make relative links to posts work
   collections: true
 
+# See https://github.com/benbalter/jekyll-titles-from-headings#configuration
 titles_from_headings:
   enabled: true
+  # Strip title from rendered body to avoid having it appear twice in minima,
+  # which also shows page.title in its layouts
   strip_title: true
   collections: true
 
+# See https://github.com/jekyll/minima#usage
 header_pages:
+  # Show pages in header navigation
   - colophon.md
   - privacy.md
-
 disqus:
   # We're overriding the disqus theme to use a different commenting solution,
   # so we just use any truthy value here to make minima include the comment template.
   shortname: true
-
 minima:
   skin: swsnr-auto
+  # Social links for the footer
   social_links:
     - platform: github
       user_url: "https://github.com/swsnr"
@@ -43,6 +58,7 @@ minima:
     - platform: linkedin
       user_url: "https://www.linkedin.com/in/swsnr/"
 
+# See https://github.com/jekyll/jekyll-feed#usage
 feed:
   categories:
     - archlinux
@@ -50,8 +66,13 @@ feed:
 
 markdown: kramdown
 kramdown:
+  # We use GFM to support fenced code blocks and strike-through, see
+  # https://github.com/kramdown/parser-gfm
   input: GFM
+  # Disable hard wrapping as used on Github.
   hard_wrap: false
+  # Don't automatically substitute typographic characters, we can type proper
+  # unicode alright.
   gfm_quirks: [no_auto_typographic]
   auto_id_stripping: true
   smart_quotes: ["apos", "apos", "quot", "quot"]
