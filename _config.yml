@@ -49,7 +49,7 @@ disqus:
   # so we just use any truthy value here to make minima include the comment template.
   shortname: true
 minima:
-  skin: swsnr-auto
+  skin: swsnr-bw-auto
   # Social links for the footer
   social_links:
     - platform: github
