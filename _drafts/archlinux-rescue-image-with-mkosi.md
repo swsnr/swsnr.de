@@ -225,7 +225,40 @@ index 0000000..3639662
 
 With networking set up we can now configure pacman to allow installing additional software while booted in the rescue image, to handle any kind of recovery task:
 
-TK
+```diff
+diff --git a/mkosi.extra/etc/pacman.d/mirrorlist b/mkosi.extra/etc/pacman.d/mirrorlist
+new file mode 100644
+index 0000000..4512ea2
+--- /dev/null
++++ b/mkosi.extra/etc/pacman.d/mirrorlist
+@@ -0,0 +1,4 @@
++# World-wide geo-locating mirrors
++
++Server = https://geo.mirror.pkgbuild.com/$repo/os/$arch
++Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch
+diff --git a/mkosi.postinst.chroot b/mkosi.postinst.chroot
+new file mode 100755
+index 0000000..51d9e7f
+--- /dev/null
++++ b/mkosi.postinst.chroot
+@@ -0,0 +1,10 @@
++#!/usr/bin/env bash
++# This Source Code Form is subject to the terms of the Mozilla Public
++# License, v. 2.0. If a copy of the MPL was not distributed with this
++# file, You can obtain one at http://mozilla.org/MPL/2.0/.
++
++set -euo pipefail
++
++echo "Populating pacman keyring"
++pacman-key --init
++pacman-key --populate
+```
+
+We add a default `mirrorlist` to the image using Arch's worldwide geolocating mirrors,  to avoid the hassle of setting up a mirrorlist for the occasional package installation during recovery.
+
+We also initialize the `pacman` keyring within the image in a post-installation script.
+`mkosi` runs the `postinst` script after package installation, but before configuration and image cleanup.
+The `.chroot` extension tells `mkosi` to run the script while `chroot`ed into the image.
 
 ## Add manpages
 
