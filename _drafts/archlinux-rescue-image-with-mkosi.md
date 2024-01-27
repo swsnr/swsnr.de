@@ -262,6 +262,39 @@ The `.chroot` extension tells `mkosi` to run the script while `chroot`ed into th
 
 ## Add manpages
 
+To access man pages in the image we need to install a man page viewer and pager.
+For the latter, `less` is the obvious choice, but for the former we choose `mandoc` over `man-db` because it's a lot smaller.
+
+```diff
+diff --git a/mkosi.conf b/mkosi.conf
+index 67db49d..56b87b0 100644
+--- a/mkosi.conf
++++ b/mkosi.conf
+@@ -14,6 +14,9 @@ Packages=
+        wireless-regdb
+        iwd
+        arch-install-scripts
++       less
++       man-pages
++       mandoc
+ KernelCommandLine=
+ Locale=en_US.UTF-8
+ Keymap=us
+diff --git a/mkosi.postinst.chroot b/mkosi.postinst.chroot
+index 51d9e7f..3a65e42 100755
+--- a/mkosi.postinst.chroot
++++ b/mkosi.postinst.chroot
+@@ -8,3 +8,6 @@ set -euo pipefail
+ echo "Populating pacman keyring"
+ pacman-key --init
+ pacman-key --populate
++
++echo "Updating manpage database"
++makewhatis /usr/share/man
+```
+
+However, unlike `man-db` there's no trigger for `mandoc` to update the manpage database, so we add this as a new step to our post-installation script.
+
 ## Set os-release metadata
 
 ## Shrink the image
