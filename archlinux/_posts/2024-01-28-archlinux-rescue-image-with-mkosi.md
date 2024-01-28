@@ -371,7 +371,7 @@ To make a real difference, however, we need to shrink the biggest contributors t
 We first default to excluding all kernel modules: `mkosi` does not touch kernel modules by default, so excluding all modules is necessary to make the subsequent include rules take effect.
 
 With these include rules we first include all kernel modules currently used on the host system: We'd like to use the image to boot into our hardware, so the set of loaded modules is a good baseline.
-Then we include a couple of additional driver hierarchies, including all filesystems, all HID, input, and USB devices (to make sure we can plug a USB disk with e.g. an NTFS filesystem, even if none was plugged into the running system so far).
+Then we include a couple of additional driver hierarchies, including all filesystems, all HID, input, and USB devices (to make sure we can plug a USB disk with e.g. an NTFS file system, even if none was plugged into the running system so far).
 We also include device mapper drivers and the crypto hierarchy to support all kinds of encrypted disks, optionally TPM locked.
 Finally, we also include all virtio drivers, to still be able to test the image in qemu.
 
