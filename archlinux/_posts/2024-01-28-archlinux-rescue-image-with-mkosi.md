@@ -1,6 +1,6 @@
   # Arch Linux rescue image with mkosi
 
-  In this post we'll build a small single-file Arch Linux rescue image for EFI systems.
+ In this post we'll build a small single-file Arch Linux rescue image for EFI systems.
 
   We will end up with a single EFI executable of about 400 MiB which embeds a fully-fledged Arch Linux system.
   We can then put this image on the EFI partition and sign it for secure boot, which gives us a rescue single-file rescue system to boot into in case the main Arch installation does not boot anymore.
@@ -11,6 +11,9 @@
   You can find my personal version of the image built in this post at <https://github.com/swsnr/arch-rescue-image>.
 
   <!--more-->
+
+I got the idea from a recent post by the mkosi maintainer at <https://0pointer.net/blog/a-re-introduction-to-mkosi-a-tool-for-generating-os-images.html> which I recommend reading for more information about `mkosi`. 
+The post calls what we're building here a Unified System Image (USI).
 
   ## Prerequisites
 
