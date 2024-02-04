@@ -59,7 +59,7 @@ Packages=
 We
 
 - select Arch as base distribution for the image,
-- configure the identifier of the image which also configure the output filenames,
+- configure the identifier of the image which also sets the output filenames,
 - enable the UKI output format,
 - set a hostname for the image,
 - and disable bootloader installation (otherwise `mkosi` would install a somewhat superfluous EFI partition inside the UKI).
@@ -96,7 +96,7 @@ Hence, our preset file will end up in `/etc/systemd/system-preset/10-rescue-imag
 
 ## Configure networking
 
-In addition to our custom preset file the default systemd preset applies, which enables `systemd-resolved` and `systemd-networkd` and thus provides us with a small yet capable network management stack in the
+In addition to our custom preset file the default systemd preset applies, which enables `systemd-resolved` and `systemd-networkd` and thus provides us with a small yet capable network management stack in the rescue system.
 However, we still need to configure this stack a bit for proper networking when booting the image on real hardware.
 
 We first put `systemd-resolved` into the recommended `stub` mode for the `resolv.conf` file, to make sure all DNS resolution goes through resolved, by placing the `resolv.conf` symlink to `/run/systemd/resolve/stub-resolv.conf` into the `mkosi.extra` directory (the diff actually describes a symlink in Git):
