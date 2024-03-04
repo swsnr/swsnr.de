@@ -1,4 +1,6 @@
-# About
+----
+title: About
+----
 
 System engineer for satellite mission planning.
 
