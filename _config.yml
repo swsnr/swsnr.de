@@ -23,7 +23,7 @@ social:
     - https://github.com/swsnr
     - https://mastodon.social/@swsnr
     - https://matrix.to/#/@swsnr:matrix.org
-    - https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+    - https://www.linkedin.com/in/swsnr/
 
 # See https://github.com/benbalter/jekyll-relative-links#configuration
 relative_links:
@@ -42,7 +42,7 @@ titles_from_headings:
 # See https://github.com/jekyll/minima#usage
 header_pages:
   # Show pages in header navigation
-  - colophon.md
+  - about.md
   - privacy.md
 disqus:
   # We're overriding the disqus theme to use a different commenting solution,
