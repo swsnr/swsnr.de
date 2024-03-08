@@ -24,6 +24,7 @@ social:
     - https://mastodon.social/@swsnr
     - https://matrix.to/#/@swsnr:matrix.org
     - https://www.linkedin.com/in/swsnr/
+    - https://build.opensuse.org/users/swsnr
 
 # See https://github.com/benbalter/jekyll-relative-links#configuration
 relative_links:
@@ -54,6 +55,8 @@ minima:
   social_links:
     - platform: github
       user_url: "https://github.com/swsnr"
+    - platform: obs
+      user_url: https://build.opensuse.org/users/swsnr
     - platform: mastodon
       user_url: "https://mastodon.social/@swsnr"
     - platform: matrix
