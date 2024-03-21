@@ -1,13 +1,12 @@
 title: Sebastian Wiesner
 description: >-
-  System engineer for satellite mission planning. Gnome. Rust. Arch.
+  System engineer in satellite mission planning. Gnome. Rust. Arch.
 repository: swsnr/swsnr.de
 url: "https://swsnr.de"
 excerpt_separator: "<!--more-->"
 show_excerpts: true
 timezone: UTC
 permalink: /:slug
-theme: minima
 
 include:
   - .well-known
@@ -45,10 +44,6 @@ header_pages:
   # Show pages in header navigation
   - about.md
   - privacy.md
-disqus:
-  # We're overriding the disqus theme to use a different commenting solution,
-  # so we just use any truthy value here to make minima include the comment template.
-  shortname: true
 minima:
   skin: swsnr-bw-auto
   # Social links for the footer

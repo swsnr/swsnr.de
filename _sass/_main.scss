@@ -1,0 +1,43 @@
+@use "pico/pico" with (
+  $theme-color: "sand",
+  $enable-semantic-container: true,
+  $enable-classes: false,
+  $enable-responsive-typography: false,
+  $breakpoints: (
+    xl: (
+      viewport: 950px
+    ),
+    xxl: (
+      viewport: 950px,
+    )
+  ),
+  $modules: (
+    // We have no forms on this blog
+    "forms/input-color": false,
+    "forms/input-date": false,
+    "forms/input-file": false,
+    "forms/input-range": false,
+    "forms/input-search": false,
+    // We only use a few select components
+    "components/accordion": false,
+    "components/card": true,
+    "components/dropdown": false,
+    "components/loading": false,
+    "components/modal": false,
+    "components/nav": true,
+    "components/progress": false,
+    "components/tooltip": false,
+    "utilities/accessibility": true,
+    "utilities/reduce-motion": false
+  )
+);
+
+@use "highlight";
+
+:root {
+  --pico-font-family: serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --pico-font-family: var(--pico-font-family-sans-serif)
+}
