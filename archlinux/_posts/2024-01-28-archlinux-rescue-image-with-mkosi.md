@@ -390,3 +390,7 @@ $ mkosi -f
 I used to keep a rescue image based on GRML around (see [GRML on ESP](https://wiki.archlinux.org/title/Systemd-boot#Grml_on_ESP)), but stopped doing so once I had a working secure boot setup: GRML ships its initrd and its squash disk image separately, and there were no easy means to combine them into a single image for signing, or sign each part separately.
 
 With mkosi, I finally have a viable alternative which supports secure boot, and allows me to leave my Arch ISO thumb drive at home.
+
+## Further reading
+
+[Building USIs with mkosi](https://overhead.neocities.org/blog/build-usi-mkosi/) has a bit more background information, and some helpful tips for more thorough cleanup to shrink the image.
