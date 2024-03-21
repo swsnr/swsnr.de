@@ -2,7 +2,7 @@
 
 In this post we'll build a small single-file Arch Linux rescue image for EFI systems.
 
-We will end up with a single EFI executable of about 400 MiB which embeds a fully-fledged Arch Linux system.
+We will end up with a single EFI executable of about 400 MiB (further optimization can get it down to about 200MiB) which embeds a fully-fledged Arch Linux system.
 We can then put this image on the EFI partition and sign it for secure boot, which gives us a rescue single-file rescue system to boot into in case the main Arch installation does not boot anymore.
 From that rescue system we can then `chroot` into the main installation to repair it.
 
