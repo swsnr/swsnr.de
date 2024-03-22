@@ -35,9 +35,16 @@
 @use "highlight";
 
 :root {
-  --pico-font-family: serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  --pico-font-family: var(--pico-font-family-sans-serif)
+  // Just use system fonts and monospace, and do not specify common system fonts.
+  // system-ui exists on every system I care for
+  --pico-font-family-sans-serif: system-ui, sans-serif, var(--pico-font-family-emoji);
+  // A sort-of system monospace font stack.  Unfortunately, there's not much support for
+  // ui-monospace yet, so specify common system fonts.
+  //
+  // On Linux, this doesn't exist of course. PicoCSS just uses Liberation Mono which is a terrible default, so let's put
+  // some nicer common fonts in front of it.
+  //
+  // In particular, we add JetBrains Mono because I like it, Source Code Pro because it's the default of GNOME, and
+  // Noto Sans Mono, because it's a good fallback with great character coverage.  We don't add Liberation Mono at all.
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "JetBrains Mono", "Source Code Pro", "Noto Sans Mono", monospace, var(--pico-font-family-emoji)
 }
