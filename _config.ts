@@ -37,6 +37,8 @@ const site = lume({
   },
 });
 
+// Mark production deployment
+site.data("isProduction", site.options.location.hostname === "swsnr.de");
 // For the index page use the site description as description
 site.data("description", globalData.metas.siteDescription, "/index.njk");
 
