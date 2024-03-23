@@ -64,5 +64,7 @@ site.use(title_from_heading());
 
 // Copy generic assets
 site.copy("assets");
+// Copy images for pages and posts
+site.copy("images");
 
 export default site;
