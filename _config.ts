@@ -4,14 +4,15 @@
 // v. 2.0.  If a copy of the MPL was not distributed with this file, You can
 // obtain one at https://mozilla.org/MPL/2.0/.
 
-import lume from "lume/mod.ts";
-import liquid from "lume/plugins/liquid.ts";
 import date from "lume/plugins/date.ts";
+import feed from "lume/plugins/feed.ts";
+import liquid from "lume/plugins/liquid.ts";
+import lume from "lume/mod.ts";
+import metas from "lume/plugins/metas.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
-import metas from "lume/plugins/metas.ts";
-import feed from "lume/plugins/feed.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
@@ -38,6 +39,9 @@ const site = lume({
 // Template engines and styles
 site.use(liquid());
 site.use(sass());
+
+// Sitemap
+site.use(sitemap());
 
 // Feeds
 site.use(feed({
