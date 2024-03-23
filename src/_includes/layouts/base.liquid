@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ lang }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><strong><a href="{{ "/" | relative_url }}">{{site.title}}</a></strong></li>
+                    <li><strong><a href="{{ "/" | relative_url }}">{{siteMeta.title}}</a></strong></li>
                 </ul>
                 <ul>
                     <li><a href="{{ "/about" | relative_url }}">About</a></li>
@@ -29,10 +29,10 @@
         <footer>
             <nav>
                 <ul>
-                    <li><small>{{site.description}}</small></li>
+                    <li><small>{{siteMeta.description}}</small></li>
                 </ul>
                 <ul>
-                    <li><a href="mailto:{{site.author.email}}">Send email</a></li>
+                    <li><a href="mailto:{{siteMeta.author.email}}">Send email</a></li>
                     <li><a href="TODO: Feed link">Subscribe</a></li>
                 </ul>
             </nav>

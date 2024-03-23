@@ -44,4 +44,17 @@ site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
 
+// Global data defaults
+site.data("lang", "en");
+// Global metadata for the entire site
+site.data("siteMeta", {
+  title: "Sebastian Wiesner",
+  description:
+    "System engineer in satellite mission planning. Gnome. Rust. Arch.",
+  author: {
+    name: "Sebastian Wiesner",
+    email: "sebastian@swsnr.de",
+  },
+});
+
 export default site;
