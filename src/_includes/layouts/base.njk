@@ -24,8 +24,7 @@
                     <li><strong><a href="{{ "/" | url }}">{{metas.site}}</a></strong></li>
                 </ul>
                 <ul>
-                    <li><a href="{{ "/about" | url }}">About</a></li>
-                    <li><a href="{{ "/privacy" | url }}">Privacy policy</a></li>
+                    {% for link in navLinks %}<li><a href="{{ link.href | url }}">{{ link.text | safe }}</a></li>{% endfor %}
                 </ul>
             </nav>
         </header>
