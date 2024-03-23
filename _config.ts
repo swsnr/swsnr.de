@@ -11,10 +11,13 @@ import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import metas from "lume/plugins/metas.ts";
+import feed from "lume/plugins/feed.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
 import title_from_heading from "./plugins/title-from-content.ts";
+
+import * as globalData from "./src/_data.ts";
 
 const site = lume({
   src: "src",
@@ -35,6 +38,17 @@ const site = lume({
 // Template engines and styles
 site.use(liquid());
 site.use(sass());
+
+// Feeds
+site.use(feed({
+  output: ["/feed.xml", "/feed.json"],
+  query: "includeInFeed=true",
+  info: {
+    title: globalData.metas.site,
+    subtitle: globalData.metas.description,
+    lang: globalData.metas.lang,
+  },
+}));
 
 // Global metadata
 site.use(metas());

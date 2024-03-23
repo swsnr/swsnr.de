@@ -19,4 +19,11 @@ const layout = "layouts/post.liquid";
  */
 const titleFromHeading = "cut";
 
-export { basename, layout, titleFromHeading };
+/**
+ * Include all posts in the feed.
+ *
+ * See _config.ts for feed configuration.
+ */
+const includeInFeed = true;
+
+export { basename, includeInFeed, layout, titleFromHeading };
