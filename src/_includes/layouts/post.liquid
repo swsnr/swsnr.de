@@ -7,7 +7,7 @@ layout: layouts/base.liquid
     <hgroup>
       <h1>{{ title }}</h1>
       <p>
-        Published {{ date | date: 'HUMAN_DATE' }}TODO: Tags
+        Published {{ date | date: 'HUMAN_DATE' }} {% for tag in tags -%}#{{ tag }}{% endfor %}
       </p>
     </hgroup>
   </header>
