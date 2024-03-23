@@ -11,5 +11,13 @@
     "types": [
       "lume/types.ts"
     ]
+  },
+  "fmt": {
+    "exclude": [
+      ".vscode/",
+      "_site/",
+      "**/*.md",
+      "src/_includes/sass/pico/**/*"
+    ]
   }
 }
