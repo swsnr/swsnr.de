@@ -6,7 +6,6 @@
 
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
-import liquid from "lume/plugins/liquid.ts";
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
@@ -42,7 +41,6 @@ const site = lume({
 site.data("description", globalData.metas.siteDescription, "/index.njk");
 
 // Template engines and styles
-site.use(liquid());
 site.use(nunjucks());
 site.use(sass());
 

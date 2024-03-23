@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="{{ "/style.css" | url }}">
         <title>{{ metas.site }} | {{ title }}</title>
         <meta name="author" content="{{ author.name }}">
-        <meta property="article:published_time" content="{{ date | date: 'ATOM' }}">
-        <link rel="canonical" href="{{ url | url: true }}">
-        <link type="application/rss+xml" rel="alternate" href="{{ "/feed.xml" | url: true }}" title="Sebastian Wiesner">
-        <link type="application/json" rel="alternate" href="{{ "/feed.json" | url: true }}" title="Sebastian Wiesner">
+        <meta property="article:published_time" content="{{ date | date('ATOM') }}">
+        <link rel="canonical" href="{{ url | url(true) }}">
+        <link type="application/rss+xml" rel="alternate" href="{{ "/feed.xml" | url(true) }}" title="Sebastian Wiesner">
+        <link type="application/json" rel="alternate" href="{{ "/feed.json" | url(true) }}" title="Sebastian Wiesner">
         {%- if 'TODO' == 'production' -%}
         <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         {%- endif -%}
@@ -28,7 +28,7 @@
             </nav>
         </header>
         <main>
-            {{ content }}
+            {{ content | safe }}
         </main>
         <footer>
             <nav>

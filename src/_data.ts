@@ -19,7 +19,7 @@ const author = {
   email: "sebastian@swsnr.de",
 };
 // Default language and layout
-const layout = "layouts/page.liquid";
+const layout = "layouts/page.njk";
 const lang = "en";
 
 export { author, lang, layout, metas };
