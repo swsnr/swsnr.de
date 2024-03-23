@@ -16,6 +16,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  DENO_DIR: ./.deno-cache
+
 jobs:
   build:
     runs-on: ubuntu-latest
