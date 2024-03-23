@@ -1,0 +1,29 @@
+---
+title: "Home"
+layout: "layouts/base.liquid"
+---
+<article>
+    <ul>
+      <li><a href="https://github.com/swsnr/" rel="me">Github</a></li>
+      <li><a href="https://mastodon.social/@swsnr" rel="me">Mastodon</a></li>
+      <li><a href="https://matrix.to/#/@swsnr:matrix.org" rel="me">Matrix</a></li>
+      <li><a href="https://www.linkedin.com/in/swsnr/" rel="me">LinkedIn</a></li>
+      <li><a href="https://build.opensuse.org/project/show/home:swsnr" rel="me">Packages</a></li>
+      <li><a href="https://gitlab.archlinux.org/swsnr" rel="me">Archlinux Gitlab</a></li>
+    </ul>
+</article>
+
+<article>
+    <header><h2>Posts</h2></header>
+    {% for post in search.pages("post !hidden", "date=desc") -%}
+    <section>
+        <hgroup>
+            <p><a href="{{ post.url | url() }}"><strong>{{post.title}}</strong></a></p>
+            <p><small>{{ post.date | date('HUMAN_DATE') }}</small></p>
+        </hgroup>
+        {{ post.excerpt | md | safe }}
+        <p><a href="{{ post.url | url() }}"><small>Read more…</small></a></p>
+    </section>
+    {%- if not forloop.last -%}<hr>{%- endif -%}
+    {%- endfor %}
+</article>

@@ -9,6 +9,7 @@ import feed from "lume/plugins/feed.ts";
 import liquid from "lume/plugins/liquid.ts";
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
+import nunjucks from "lume/plugins/nunjucks.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
@@ -17,6 +18,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import anchor from "npm:markdown-it-anchor";
 
 import title_from_heading from "./plugins/title-from-content.ts";
+import excerpt from "./plugins/excerpt.ts";
 
 import * as globalData from "./src/_data.ts";
 
@@ -38,6 +40,7 @@ const site = lume({
 
 // Template engines and styles
 site.use(liquid());
+site.use(nunjucks());
 site.use(sass());
 
 // Sitemap
@@ -46,7 +49,7 @@ site.use(sitemap());
 // Feeds
 site.use(feed({
   output: ["/feed.xml", "/feed.json"],
-  query: "includeInFeed=true",
+  query: "post !hidden",
   info: {
     title: globalData.metas.site,
     subtitle: globalData.metas.description,
@@ -65,6 +68,7 @@ site.use(resolve_urls());
 site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
+site.use(excerpt());
 
 // Copy generic assets
 site.copy("assets");

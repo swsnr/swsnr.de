@@ -12,7 +12,7 @@ const basename = "../";
 /**
  * Render all posts with the post layout.
  */
-const layout = "layouts/post.liquid";
+const layout = "layouts/post.njk";
 
 /**
  * For posts, take the title from the first heading.
@@ -20,10 +20,11 @@ const layout = "layouts/post.liquid";
 const titleFromHeading = "cut";
 
 /**
- * Include all posts in the feed.
+ * Tag all pages in this directory as posts.
  *
- * See _config.ts for feed configuration.
+ * All Posts are shown in archives.  Unless they're tagged "hidden" posts are
+ * also shown on the front page and included in the feed.
  */
-const includeInFeed = true;
+const tags = ["post"];
 
-export { basename, includeInFeed, layout, titleFromHeading };
+export { basename, layout, tags, titleFromHeading };

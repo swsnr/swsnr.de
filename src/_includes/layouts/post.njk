@@ -1,0 +1,21 @@
+---
+layout: layouts/base.liquid
+---
+
+{% set hidden_tags = ["hidden", "post"] %}
+<article>
+  <header>
+    <hgroup>
+      <h1>{{ title | safe }}</h1>
+      <p>
+        Published {{ date | date('HUMAN_DATE') }}
+        {% for tag in tags -%}{% if tag not in hidden_tags %} #{{ tag }}{% endif %}{% endfor %}
+      </p>
+    </hgroup>
+  </header>
+  {{ content | safe }}
+</article>
+
+{%- if "TODO" == "production" -%}
+<article>{%- include giscus_comments.html -%}</article>
+{%- endif -%}
