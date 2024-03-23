@@ -1,4 +1,4 @@
-// Copyright Sebastian Wiesner
+// Copyright Sebastian Wiesner <sebastian@swsnr.de>
 //
 // This Source Code Form is subject to the terms of the Mozilla Public License,
 // v. 2.0.  If a copy of the MPL was not distributed with this file, You can
@@ -10,6 +10,7 @@ import date from "lume/plugins/date.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
+import metas from "lume/plugins/metas.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
@@ -35,6 +36,9 @@ const site = lume({
 site.use(liquid());
 site.use(sass());
 
+// Global metadata
+site.use(metas());
+
 // URLs: Make all internal URLs, and resolve URLs to source files
 site.use(relative_urls());
 site.use(resolve_urls());
@@ -44,17 +48,7 @@ site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
 
-// Global data defaults
-site.data("lang", "en");
-// Global metadata for the entire site
-site.data("siteMeta", {
-  title: "Sebastian Wiesner",
-  description:
-    "System engineer in satellite mission planning. Gnome. Rust. Arch.",
-  author: {
-    name: "Sebastian Wiesner",
-    email: "sebastian@swsnr.de",
-  },
-});
+// Copy generic assets
+site.copy("assets");
 
 export default site;

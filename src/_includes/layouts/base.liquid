@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
-        <!-- TODO: SEO metadata -->
+        <title>{{ metas.site }} | {{ title }}</title>
+        <meta name="description" content="{{ metas.description }}">
         <!-- TODO: Link to feek -->
         {%- if 'TODO' == 'production' -%}
         <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -15,7 +16,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><strong><a href="{{ "/" | relative_url }}">{{siteMeta.title}}</a></strong></li>
+                    <li><strong><a href="{{ "/" | relative_url }}">{{metas.site}}</a></strong></li>
                 </ul>
                 <ul>
                     <li><a href="{{ "/about" | relative_url }}">About</a></li>
@@ -29,10 +30,10 @@
         <footer>
             <nav>
                 <ul>
-                    <li><small>{{siteMeta.description}}</small></li>
+                    <li><small>{{metas.description}}</small></li>
                 </ul>
                 <ul>
-                    <li><a href="mailto:{{siteMeta.author.email}}">Send email</a></li>
+                    <li><a href="mailto:{{author.email}}">Send email</a></li>
                     <li><a href="TODO: Feed link">Subscribe</a></li>
                 </ul>
             </nav>
