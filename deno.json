@@ -14,7 +14,7 @@
   },
   "exclude": [
     "_site/",
-    "/.deno-cache/"
+    ".deno-cache/"
   ],
   "fmt": {
     "exclude": [
