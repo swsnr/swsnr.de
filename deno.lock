@@ -7,6 +7,7 @@
       "npm:date-fns@3.4.0": "npm:date-fns@3.4.0",
       "npm:estree-walker@3.0.3": "npm:estree-walker@3.0.3",
       "npm:liquidjs@10.10.1": "npm:liquidjs@10.10.1",
+      "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7_@types+markdown-it@13.0.7_markdown-it@14.0.0",
       "npm:markdown-it-attrs@4.1.6": "npm:markdown-it-attrs@4.1.6_markdown-it@14.0.0",
       "npm:markdown-it-deflist@3.0.0": "npm:markdown-it-deflist@3.0.0",
       "npm:markdown-it@14.0.0": "npm:markdown-it@14.0.0",
@@ -264,11 +265,26 @@
           "@types/node": "@types/node@18.16.19"
         }
       },
+      "@types/linkify-it@3.0.5": {
+        "integrity": "sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==",
+        "dependencies": {}
+      },
+      "@types/markdown-it@13.0.7": {
+        "integrity": "sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==",
+        "dependencies": {
+          "@types/linkify-it": "@types/linkify-it@3.0.5",
+          "@types/mdurl": "@types/mdurl@1.0.5"
+        }
+      },
       "@types/mdast@4.0.3": {
         "integrity": "sha512-LsjtqsyF+d2/yFOYaN22dHZI1Cpwkrj+g06G8+qtUKlhovPW89YhqSnfKtMbkgmEtYpH2gydRNULd6y8mciAFg==",
         "dependencies": {
           "@types/unist": "@types/unist@3.0.2"
         }
+      },
+      "@types/mdurl@1.0.5": {
+        "integrity": "sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==",
+        "dependencies": {}
       },
       "@types/ms@0.7.34": {
         "integrity": "sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==",
@@ -657,6 +673,13 @@
         "integrity": "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==",
         "dependencies": {
           "yallist": "yallist@4.0.0"
+        }
+      },
+      "markdown-it-anchor@8.6.7_@types+markdown-it@13.0.7_markdown-it@14.0.0": {
+        "integrity": "sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==",
+        "dependencies": {
+          "@types/markdown-it": "@types/markdown-it@13.0.7",
+          "markdown-it": "markdown-it@14.0.0"
         }
       },
       "markdown-it-attrs@4.1.6_markdown-it@14.0.0": {
@@ -2008,6 +2031,7 @@
     "https://deno.land/x/lume@v2.1.2/plugins/modules.ts": "19a66398a5494f506458e48b8443a7c4700b7577e8fcc0818c39b1d0530c8950",
     "https://deno.land/x/lume@v2.1.2/plugins/paginate.ts": "e86617ec1ad491c86bc4866db41f070a6b393e8c2ac94ed28a51ca309f88477d",
     "https://deno.land/x/lume@v2.1.2/plugins/relative_urls.ts": "279e7c54a1dba9945c7ac742360cca386818e990b6b609b2fda3b4ca4792bdac",
+    "https://deno.land/x/lume@v2.1.2/plugins/resolve_urls.ts": "05cbde52fbe88bb86a3a5d161920acff0c198eb22190853c53cdbbbf98e52edf",
     "https://deno.land/x/lume@v2.1.2/plugins/search.ts": "8ec3a8f082b8ff1532bbe8f8bf76dfaa2d0feab7c2ec5c824d0ccc044c26f640",
     "https://deno.land/x/lume@v2.1.2/plugins/toml.ts": "60191e1e8fd0922def0b3f0eaad13988217511571a54659481759db4b0ca4f82",
     "https://deno.land/x/lume@v2.1.2/plugins/url.ts": "3d298886cb16e1110d427d2f257de6c2ae0da3cd7076b6abcbbd41e7536ed094",
