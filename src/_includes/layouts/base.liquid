@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ "/style.css" | url }}">
         <title>{{ metas.site }} | {{ title }}</title>
-        <meta name="description" content="{{ metas.description }}">
         <meta name="author" content="{{ author.name }}">
         <meta property="article:published_time" content="{{ date | date: 'ATOM' }}">
         <link rel="canonical" href="{{ url | url: true }}">
@@ -34,7 +33,7 @@
         <footer>
             <nav>
                 <ul>
-                    <li><small>{{metas.description}}</small></li>
+                    <li><small>{{metas.siteDescription}}</small></li>
                 </ul>
                 <ul>
                     <li><a href="mailto:{{author.email}}">Send email</a></li>

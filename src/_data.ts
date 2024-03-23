@@ -6,8 +6,9 @@
 
 const metas = {
   site: "Sebastian Wiesner",
-  description:
+  siteDescription:
     "System engineer in satellite mission planning. Gnome. Rust. Arch.",
+  description: "=description",
   title: "=title",
   lang: "=lang",
   image: "/assets/avatar.jpg",
@@ -17,7 +18,6 @@ const author = {
   name: "Sebastian Wiesner",
   email: "sebastian@swsnr.de",
 };
-
 // Default language and layout
 const layout = "layouts/page.liquid";
 const lang = "en";

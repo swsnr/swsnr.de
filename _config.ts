@@ -38,6 +38,9 @@ const site = lume({
   },
 });
 
+// For the index page use the site description as description
+site.data("description", globalData.metas.siteDescription, "/index.njk");
+
 // Template engines and styles
 site.use(liquid());
 site.use(nunjucks());
