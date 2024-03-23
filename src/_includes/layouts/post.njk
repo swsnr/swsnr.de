@@ -9,7 +9,8 @@ layout: layouts/base.njk
       <h1>{{ title | safe }}</h1>
       <p>
         Published {{ date | date('HUMAN_DATE') }}
-        {% for tag in tags -%}{% if tag not in hidden_tags %} #{{ tag }}{% endif %}{% endfor %}
+        {% for tag in tags -%}{% if tag not in hidden_tags %}
+        <a href="{{ " /archives/" + tag | url }}">#{{ tag }}</a>{% endif %}{% endfor %}
       </p>
     </hgroup>
   </header>
@@ -18,23 +19,12 @@ layout: layouts/base.njk
 
 {%- if isProduction -%}
 <article>
-<script src="https://giscus.app/client.js"
-        data-repo="swsnr/swsnr.de"
-        data-repo-id="R_kgDOIofjKw"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOIofjK84CcDds"
-        data-mapping="og:title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
-<div class="giscus"></div>
-<noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+  <script src="https://giscus.app/client.js" data-repo="swsnr/swsnr.de" data-repo-id="R_kgDOIofjKw"
+    data-category="Announcements" data-category-id="DIC_kwDOIofjK84CcDds" data-mapping="og:title" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme"
+    data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+    </script>
+  <div class="giscus"></div>
+  <noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
 </article>
 {%- endif -%}
