@@ -15,6 +15,8 @@ import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 
+import image from "https://deno.land/x/lume_markdown_plugins/image.ts";
+
 import anchor from "npm:markdown-it-anchor";
 
 import title_from_heading from "./plugins/title-from-content.ts";
@@ -84,6 +86,7 @@ site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
 site.use(excerpt());
+site.use(image());
 
 // Copy generic assets
 site.copy("assets");

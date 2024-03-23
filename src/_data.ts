@@ -11,7 +11,7 @@ const metas = {
   description: "=description",
   title: "=title",
   lang: "=lang",
-  image: "/assets/avatar.jpg",
+  image: "=image",
 };
 
 const author = {
