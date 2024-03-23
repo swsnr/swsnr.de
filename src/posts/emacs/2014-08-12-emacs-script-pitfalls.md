@@ -14,7 +14,7 @@ However, it turns out that writing programs in Emacs Lisp is more intricate than
 
 In the early days, we’d muck about with `--no-init-file`, `--batch` and `--load` to enter noninteractive mode an.e.d load a file.  Nowadays Emacs has a convenient `--script` option to load and evaluate a specific file, but how to make a proper shebang out of it?  The naive approach won't do:
 
-```cl
+```lisp
 #!/usr/bin/emacs --script
 (message "Hello world")
 ```
@@ -23,7 +23,7 @@ Emacs is not `/bin/sh`, and its location varies between different systems. There
 
 Normally, we'd accommodate these differences with `/usr/bin/env`:
 
-```cl
+```lisp
 #!/usr/bin/env emacs --script
 (message "Hello world")
 ```
@@ -54,7 +54,7 @@ The global site initialization is often a kitchen sink which sets up globally in
 
 We can opt out of the global site initialization by adding `--quick` to the `emacs` options of our script, which gives us a bare-bones Emacs without any initialization:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 (message "Hello world")
@@ -62,7 +62,7 @@ We can opt out of the global site initialization by adding `--quick` to the `ema
 
 If you need to, you can still load the global site initialization *explicitly* from [site-run-file][srf]:
 
-```cl
+```lisp
 (load site-run-file 'no-error 'no-message)
 ```
 
@@ -74,7 +74,7 @@ If you need to, you can still load the global site initialization *explicitly* f
 
 Emacs exposes the command line arguments in [command-line-args-left][clal] alias `argv` (not to be confused with [command-line-args][cla] which holds *all* Emacs options, including those that Emacs already interpreted, and is of little use in scripts):
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
@@ -101,7 +101,7 @@ The source code of `startup.el`, more precisely the function `command-line-1`, r
 
 Since `command-line-args-left` aka `argv` is a global variable, we can just remove all remaining arguments from `argv` before our script exits:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
@@ -116,7 +116,7 @@ Hello: ("--greeting" "Good morning %s!" "John Doe")
 
 We can also just force Emacs to exit early, which is good style anyway:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
@@ -139,7 +139,7 @@ For more information about these matters, see the file named COPYING.
 
 Emacs printed its own version and exited before our script even saw the `--version` argument.  We need to use the standard double-dash `--` argument to separate Emacs options from arguments, so that our script can unaffectedly process what Emacs now considers mere arguments (see <https://stackoverflow.com/a/6807133/355252>):
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" -- "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
@@ -156,7 +156,7 @@ Hello: ("--" "--version")
 
 Typically, you’ll process all arguments in a loop, `pop`ing each argument as it is processed.  Initially, you need to pop the first argument to remove the argument separator:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" -- "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
@@ -219,7 +219,7 @@ Hello Donald Duck!
 
 For simple printing, `princ` is the right candidate, since it prints without any formatting and quoting.  And naturally the unquoted “printed representation” of a string is… the string itself, so we can use this function to print a list of names to standard output:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*-emacs-lisp-*-
 
@@ -243,7 +243,7 @@ $ ./hello.el 'John Doe' 'Donald Duck' >/dev/null
 We have covered standard output now, but what about standard input?  There are no obvious input functions in Emacs Lisp, but the minibuffer reads from standard input in batch mode (see <https://stackoverflow.com/a/2906967/355252>, I’d never
 have figured this out by myself):
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*-emacs-lisp-*-
 
@@ -280,7 +280,7 @@ This has limitations, though.  We can only read whole lines, and don't have dire
 
 By default, Emacs’ error reporting is pretty terse, in interactive mode as well as in batch mode:  It just prints the error message, without any backtraces. Consider this script, which has a little type error inside:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*-emacs-lisp-*-
 
@@ -299,7 +299,7 @@ In interactive mode, we debug such errors by simply retrying the command after <
 
 In batch mode, we can’t “retry”, though, so we need to enable backtraces right away, by setting [debug-on-error][doe]:
 
-```cl
+```lisp
 #!/bin/sh
 ":"; exec emacs --quick --script "$0" "$@" # -*-emacs-lisp-*-
 

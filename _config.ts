@@ -6,6 +6,7 @@
 
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
+import highlight from "lume/plugins/code_highlight.ts";
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
@@ -66,6 +67,9 @@ site.use(metas());
 // URLs: Make all internal URLs, and resolve URLs to source files
 site.use(relative_urls());
 site.use(resolve_urls());
+
+// Code highlighting
+site.use(highlight());
 
 // Add filter for date formatting with global date settings
 site.use(date());
