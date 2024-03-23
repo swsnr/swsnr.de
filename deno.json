@@ -12,10 +12,13 @@
       "lume/types.ts"
     ]
   },
+  "exclude": [
+    "_site/",
+    "/.deno-cache/"
+  ],
   "fmt": {
     "exclude": [
       ".vscode/",
-      "_site/",
       "**/*.md",
       "src/_includes/sass/pico/**/*"
     ]
