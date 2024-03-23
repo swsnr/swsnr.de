@@ -1,0 +1,19 @@
+---
+layout: layouts/base.liquid
+---
+
+<article>
+  <header>
+    <hgroup>
+      <h1>{{ title }}</h1>
+      <p>
+        Published {{ date | date: 'HUMAN_DATE' }}TODO: Tags
+      </p>
+    </hgroup>
+  </header>
+  {{ content }}
+</article>
+
+{%- if "TODO" == "production" -%}
+<article>{%- include giscus_comments.html -%}</article>
+{%- endif -%}
