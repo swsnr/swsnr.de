@@ -9,6 +9,7 @@ import liquid from "lume/plugins/liquid.ts";
 import date from "lume/plugins/date.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
+import sass from "lume/plugins/sass.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
@@ -30,12 +31,14 @@ const site = lume({
   },
 });
 
-// Enable liquid templates.
+// Template engines and styles
 site.use(liquid());
-// Make all internal URLs relative.
+site.use(sass());
+
+// URLs: Make all internal URLs, and resolve URLs to source files
 site.use(relative_urls());
-// Resolve all URLs to source files to the corresponding target file
 site.use(resolve_urls());
+
 // Add filter for date formatting with global date settings
 site.use(date());
 // Extract page title from first heading

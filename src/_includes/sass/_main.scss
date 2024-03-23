@@ -1,0 +1,50 @@
+@use "pico/pico" with (
+  $theme-color: "sand",
+  $enable-semantic-container: true,
+  $enable-classes: false,
+  $enable-responsive-typography: false,
+  $breakpoints: (
+    xl: (
+      viewport: 950px
+    ),
+    xxl: (
+      viewport: 950px,
+    )
+  ),
+  $modules: (
+    // We have no forms on this blog
+    "forms/input-color": false,
+    "forms/input-date": false,
+    "forms/input-file": false,
+    "forms/input-range": false,
+    "forms/input-search": false,
+    // We only use a few select components
+    "components/accordion": false,
+    "components/card": true,
+    "components/dropdown": false,
+    "components/loading": false,
+    "components/modal": false,
+    "components/nav": true,
+    "components/progress": false,
+    "components/tooltip": false,
+    "utilities/accessibility": true,
+    "utilities/reduce-motion": false
+  )
+);
+
+@use "highlight";
+
+:root {
+  // Just use system fonts and monospace, and do not specify common system fonts.
+  // system-ui exists on every system I care for
+  --pico-font-family-sans-serif: system-ui, sans-serif, var(--pico-font-family-emoji);
+  // A sort-of system monospace font stack.  Unfortunately, there's not much support for
+  // ui-monospace yet, so specify common system fonts.
+  //
+  // On Linux, this doesn't exist of course. PicoCSS just uses Liberation Mono which is a terrible default, so let's put
+  // some nicer common fonts in front of it.
+  //
+  // In particular, we add JetBrains Mono because I like it, Source Code Pro because it's the default of GNOME, and
+  // Noto Sans Mono, because it's a good fallback with great character coverage.  We don't add Liberation Mono at all.
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "JetBrains Mono", "Source Code Pro", "Noto Sans Mono", monospace, var(--pico-font-family-emoji)
+}
