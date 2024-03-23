@@ -30,7 +30,10 @@ const site = lume({
     // Remove default plugins (definition lists, attributes) to improve compatibility with commonmark
     useDefaultPlugins: false,
     // Add anchors to all headings.
-    plugins: [[anchor, { level: 2 }]],
+    plugins: [[anchor, {
+      level: 2,
+      permalink: anchor.permalink.ariaHidden({ placement: "before" }),
+    }]],
     options: {
       breaks: false,
       html: true,
