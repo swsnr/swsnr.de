@@ -64,6 +64,7 @@ site.use(title_from_heading());
 
 // Copy generic assets
 site.copy("assets");
+site.copy(".well-known");
 // Copy images for pages and posts
 site.copy("images");
 
