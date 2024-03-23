@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+    {{ content | safe }}
+    <ul>
+        {% for post in search.pages(query, "date=desc") -%}
+        <li>{{ post.date | date('DATE') }}: <a href="{{ post.url | url }}">{{ post.title }}</a></li>
+        {%- endfor %}
+    </ul>
+</article>

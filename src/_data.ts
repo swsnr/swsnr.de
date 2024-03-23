@@ -22,4 +22,11 @@ const author = {
 const layout = "layouts/page.njk";
 const lang = "en";
 
-export { author, lang, layout, metas };
+// Navlinks for all content
+const navLinks = [
+  { href: "/archives/", text: "Archive" },
+  { href: "/about/", text: "About" },
+  { href: "/privacy/", text: "Privacy" },
+];
+
+export { author, lang, layout, metas, navLinks };

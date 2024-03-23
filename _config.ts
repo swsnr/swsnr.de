@@ -47,11 +47,6 @@ const site = lume({
 site.data("isProduction", site.options.location.hostname === "swsnr.de");
 // For the index page use the site description as description
 site.data("description", globalData.metas.siteDescription, "/index.njk");
-// Navigation links
-site.data("navLinks", [
-  { href: "/about/", text: "About" },
-  { href: "/privacy/", text: "Privacy" },
-]);
 
 // Template engines and styles
 site.use(nunjucks());
