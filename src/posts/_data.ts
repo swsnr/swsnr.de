@@ -20,11 +20,11 @@ const layout = "layouts/post.njk";
 const titleFromHeading = "cut";
 
 /**
- * Tag all pages in this directory as posts.
+ * Mark all posts as such.
  *
- * All Posts are shown in archives.  Unless they're tagged "hidden" posts are
+ * All posts are shown in archives.  Unless they're tagged "hidden" posts are
  * also shown on the front page and included in the feed.
  */
-const tags = ["post"];
+const type = "post";
 
-export { basename, layout, tags, titleFromHeading };
+export { basename, layout, titleFromHeading, type };

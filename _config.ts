@@ -58,7 +58,7 @@ site.use(sitemap());
 // Feeds
 site.use(feed({
   output: ["/feed.xml", "/feed.json"],
-  query: "post !hidden",
+  query: "type=post !hidden",
   info: {
     title: globalData.metas.site,
     subtitle: globalData.metas.description,
