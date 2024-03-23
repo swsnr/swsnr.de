@@ -32,7 +32,6 @@ const pageTitleFromMarkdownHeading = (
   if (
     title || !content || !titleFromHeading || titleFromHeading == "none"
   ) {
-    console.log("SKIPPING", page.sourcePath, page.data);
     // Skip the page if it already has a title or has no content, or if the plugin was disabled for the page.
     return;
   }
