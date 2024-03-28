@@ -15,7 +15,7 @@ import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 
-import image from "https://deno.land/x/lume_markdown_plugins/image.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.7.0/image.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
