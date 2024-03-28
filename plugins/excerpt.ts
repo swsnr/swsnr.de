@@ -6,14 +6,22 @@
 
 import Site from "lume/core/site.ts";
 import { Page } from "lume/core/file.ts";
+import site from "../_config.ts";
 
-const extractMarkdownExcerpt = (page: Page) => {
+const extractMarkdownExcerpt = async (page: Page) => {
   const { content } = page.data;
   if (page.data.excerpt || typeof content !== "string") {
     return;
   }
 
-  page.data.excerpt = content.split("<!--more-->", 1)[0];
+  page.data.excerpt = await site.renderer.render<string>(
+    "{{ excerpt | md() | safe   }}",
+    {
+      templateEngine: "njk",
+      excerpt: content.split("<!--more-->", 1)[0],
+    },
+    "",
+  );
 };
 
 const extractMarkdownDescription = async (site: Site, page: Page) => {
@@ -23,7 +31,7 @@ const extractMarkdownDescription = async (site: Site, page: Page) => {
   }
   // Render the excerpt and strip out all tags, then take the 100 first words.
   const rawText = await site.renderer.render<string>(
-    `{{ excerpt | md() | striptags() }}`,
+    `{{ excerpt | striptags() }}`,
     {
       templateEngine: "njk",
       excerpt,
@@ -38,9 +46,9 @@ const extractMarkdownDescription = async (site: Site, page: Page) => {
 
 export default () => (site: Site) => {
   site.preprocess([".md"], async (pages: readonly Page[]) => {
-    for (const page of pages) {
-      extractMarkdownExcerpt(page);
+    await Promise.all(pages.map(async (page) => {
+      await extractMarkdownExcerpt(page);
       await extractMarkdownDescription(site, page);
-    }
+    }));
   });
 };

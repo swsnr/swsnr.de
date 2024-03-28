@@ -21,7 +21,7 @@ layout: "layouts/base.njk"
             <p><a href="{{ post.url | url() }}"><strong>{{post.title}}</strong></a></p>
             <p><small>{{ post.date | date('HUMAN_DATE') }}</small></p>
         </hgroup>
-        {{ post.excerpt | md | safe }}
+        {{ post.excerpt | safe }}
         <p><a href="{{ post.url | url() }}"><small>Read more…</small></a></p>
     </section>
     {%- if not forloop.last -%}<hr>{%- endif -%}
