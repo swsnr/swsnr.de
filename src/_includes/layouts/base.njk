@@ -13,6 +13,10 @@
         <link rel="canonical" href="{{ url | url(true) }}">
         <link type="application/rss+xml" rel="alternate" href="{{ "/feed.xml" | url(true) }}" title="Sebastian Wiesner">
         <link type="application/json" rel="alternate" href="{{ "/feed.json" | url(true) }}" title="Sebastian Wiesner">
+        {% if pageFeed -%}
+        <link type="application/rss+xml" rel="alternate" href="{{ pageFeed.rssUrl | url(true) }}" title="{{ pageFeed.title }}">
+        <link type="application/json" rel="alternate" href="{{ pageFeed.jsonUrl | url(true) }}" title="{{ pageFeed.title }}">
+        {%- endif %}
         {%- if isProduction -%}
         <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         {%- endif -%}
@@ -38,7 +42,11 @@
                 </ul>
                 <ul>
                     <li><a href="mailto:{{author.email}}">Send email</a></li>
+                    {% if pageFeed -%}
+                    <li><a href="{{ pageFeed.rssUrl | url }}">Subscribe to this page</a></li>
+                    {%- else -%}
                     <li><a href="{{ "/feed.xml" | url }}">Subscribe</a></li>
+                    {%- endif %}
                     <li><a href="https://github.com/swsnr/swsnr.de">Sources of this site</a></li>
                 </ul>
             </nav>

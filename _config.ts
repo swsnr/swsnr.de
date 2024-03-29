@@ -43,8 +43,12 @@ const site = lume({
   },
 });
 
+const tagsForArchives = ["archlinux", "emacs", "gnome"];
+
 // Mark production deployment
 site.data("isProduction", site.options.location.hostname === "swsnr.de");
+// Tags we're interested in for archives
+site.data("siteTags", tagsForArchives, "/archives");
 // For the index page use the site description as description
 site.data("description", globalData.metas.siteDescription, "/index.njk");
 
@@ -65,6 +69,17 @@ site.use(feed({
     lang: globalData.metas.lang,
   },
 }));
+for (const tag of tagsForArchives) {
+  site.use(feed({
+    output: [`/archives/${tag}.xml`, `/archives/${tag}.json`],
+    query: `type=post !hidden ${tag}`,
+    info: {
+      title: `${globalData.metas.site} – Posts tagged ${tag}`,
+      subtitle: globalData.metas.description,
+      lang: globalData.metas.lang,
+    },
+  }));
+}
 
 // Global metadata
 site.use(metas());
