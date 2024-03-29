@@ -8,7 +8,7 @@ layout: layouts/base.njk
     <hgroup>
       <h1>{{ title | safe }}</h1>
       <p>
-        Published {{ date | date('HUMAN_DATE') }}
+        Published {{ date | date('HUMAN_DATE') }}, {{ readingInfo.minutes }} min read,
         {% for tag in tags -%}{% if tag not in hidden_tags %}
         <a href="{{ " /archives/" + tag | url }}">#{{ tag }}</a>{% endif %}{% endfor %}
       </p>

@@ -19,7 +19,9 @@ layout: "layouts/base.njk"
     <section>
         <hgroup>
             <p><a href="{{ post.url | url() }}"><strong>{{post.title}}</strong></a></p>
-            <p><small>{{ post.date | date('HUMAN_DATE') }}</small></p>
+            <p>
+                <small>{{ post.date | date('HUMAN_DATE') }}, {{ post.readingInfo.minutes }} min read</small>
+            </p>
         </hgroup>
         {{ post.excerpt | safe }}
         <p><a href="{{ post.url | url() }}"><small>Read more…</small></a></p>

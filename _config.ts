@@ -10,6 +10,7 @@ import highlight from "lume/plugins/code_highlight.ts";
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
+import readingInfo from "lume/plugins/reading_info.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
@@ -95,8 +96,11 @@ site.use(highlight());
 site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
+// Generate excerpts and descriptions from contents.
 site.use(excerpt());
+// Use the first image in page content as social image
 site.use(image());
+site.use(readingInfo());
 
 // Copy generic assets
 site.copy("assets");

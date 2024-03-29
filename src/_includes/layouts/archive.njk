@@ -9,7 +9,7 @@ layout: layouts/base.njk
     {{ content | safe }}
     <ul>
         {% for post in search.pages(query, "date=desc") -%}
-        <li>{{ post.date | date('DATE') }}: <a href="{{ post.url | url }}">{{ post.title }}</a></li>
+        <li>{{ post.date | date('DATE') }}: <a href="{{ post.url | url }}">{{ post.title }}</a> <small>({{ post.readingInfo.minutes }} min read)</small></li>
         {%- endfor %}
     </ul>
 </article>
