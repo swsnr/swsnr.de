@@ -1,0 +1,20 @@
+{
+    "deno.enable": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "[jinja-html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+}
