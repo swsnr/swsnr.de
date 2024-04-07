@@ -1,5 +1,6 @@
 ---
 layout: null
+title: "404 Not Found"
 ---
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ layout: null
         <link rel="stylesheet" href="{{ "/style.css" | url(true) }}">
         <link rel="stylesheet" href="{{ "/assets/atom-one-light.css" | url(true) }}" media="screen and (prefers-color-scheme: light)">
         <link rel="stylesheet" href="{{ "/assets/atom-one-dark.css" | url(true) }}" media="screen and (prefers-color-scheme: dark)">
-        <title>{{ metas.site }} | Not found</title>
+        <title>{{ metas.site }} | {{ title }}</title>
         {%- if isProduction -%}
         <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         {%- endif -%}
@@ -28,9 +29,11 @@ layout: null
             </nav>
         </header>
         <main>
-            <p>I’m sorry but the page you requested does not exist.</p>
-
-            <p>Return to the <a href="{{ "/" | url(true) }}">Front page</a></p>
+            <article>
+                <header><h1>{{ title }}</h1></header>
+                <p>I’m sorry but the page you requested does not exist.</p>
+                <p>Return to the <a href="{{ "/" | url(true) }}">Front page</a></p>
+            </article>            
         </main>
         <footer>
             <nav>
