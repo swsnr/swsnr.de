@@ -8,6 +8,4 @@ Refer to the [GoatCounter Privacy Policy](https://www.goatcounter.com/help/priva
 
 Beyond GoatCounter, the site owner collects no other data or information about visitors.
 
-However, the service hosting this site, collects access logs, in
-accordance with their privacy policy at <https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>.
-The site owner cannot access this data and has no control over its collection.
+The site is hosted on https://deno.com which may collect additional data, such as access logs.  See <https://docs.deno.com/deploy/manual/privacy-policy> for the corresponding privacy policy.
