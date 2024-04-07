@@ -45,6 +45,8 @@ jobs:
           project: "swsnr"
           entrypoint: "serve.ts"
           root: ""
+          exclude: |
+            .deno-cache/
 
   # Deployment job
   deploy:
