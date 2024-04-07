@@ -27,7 +27,6 @@ import * as globalData from "./src/_data.ts";
 
 const site = lume({
   src: "src",
-  location: new URL("https://swsnr.de"),
 }, {
   markdown: {
     // Remove default plugins (definition lists, attributes) to improve compatibility with commonmark
