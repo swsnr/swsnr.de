@@ -46,8 +46,11 @@ const site = lume({
 
 const tagsForArchives = ["archlinux", "emacs", "gnome"];
 
-// Mark production deployment
-site.data("isProduction", site.options.location.hostname === "swsnr.de");
+// Production is when we're deploying from main on Github actions
+site.data(
+  "isProduction",
+  Deno.env.get("CI") === "true" && Deno.env.get("GITHUB_REF") === "main",
+);
 // Tags we're interested in for archives
 site.data("siteTags", tagsForArchives, "/archives");
 // For the index page use the site description as description
