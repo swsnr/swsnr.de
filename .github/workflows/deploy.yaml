@@ -20,7 +20,7 @@ env:
   DENO_DIR: ./.deno-cache
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,8 +37,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - run: deno task build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
@@ -47,15 +45,3 @@ jobs:
           root: ""
           exclude: |
             .deno-cache/
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
