@@ -1,4 +1,4 @@
-name: Deploy lume site to Pages
+name: Deploy site
 
 on:
   push:
@@ -39,6 +39,12 @@ jobs:
       - run: deno task build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "swsnr"
+          entrypoint: "serve.ts"
+          root: ""
 
   # Deployment job
   deploy:
