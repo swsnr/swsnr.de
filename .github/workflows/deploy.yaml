@@ -35,6 +35,12 @@ jobs:
           deno-version: v1.x
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Enable drafts unless deploying main
+        run: echo "LUME_DRAFTS=true" >>"${GITHUB_ENV}"
+        if: 'github.ref_name != "main"'
+      - name: Set production environment
+        run: echo "SWSNR_ENVIRONMENT=production" >>"${GITHUB_ENV}"
+        if: 'github.ref_name == "main"'
       - run: deno task build
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1

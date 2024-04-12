@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 env:
   DENO_DIR: ./.deno-cache
+  # For testing always check all drafts too
+  LUME_DRAFTS: true
 
 jobs:
   test:
