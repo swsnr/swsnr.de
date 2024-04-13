@@ -48,7 +48,7 @@ As systemd-boot does not need a separate boot partition we first unmount the boo
 ```console
 # umount /boot/efi
 # umount /boot
-# mkdir -m700 /efi/
+# mkdir -m755 /efi/
 # sed -i 's_/boot/efi_/efi_' /etc/fstab
 # sed -i '/\/boot/d' /etc/fstab
 # systemctl daemon-reload
