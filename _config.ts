@@ -44,7 +44,7 @@ const site = lume({
   },
 });
 
-const tagsForArchives = ["archlinux", "emacs", "gnome"];
+const tagsForArchives = ["archlinux", "fedora", "emacs", "gnome"];
 
 site.data("isProduction", Deno.env.get("SWSNR_ENVIRONMENT") == "production");
 // Tags we're interested in for archives
