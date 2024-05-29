@@ -1,5 +1,7 @@
 {
     "deno.enable": true,
+    // Enable built-in typescript validation in favour of deno
+    "typescript.validate.enable": false,
     "[typescript]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
