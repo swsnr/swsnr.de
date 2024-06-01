@@ -21,8 +21,12 @@ server.use(www({
 const redirectOldUrls = redirects({
   redirects: {
     "/2014/04/15/calling-python-from-haskell": "/calling-python-from-haskell/",
+    "/2014/04/15/calling-python-from-haskell.html":
+      "/calling-python-from-haskell/",
     "/2014/07/02/autoloads-in-emacs-lisp": "/autoloads-in-emacs-lisp/",
-    "/2014/08/12/emacs-script-pitfalls/": "/emacs-script-pitfalls/",
+    "/2014/07/02/autoloads-in-emacs-lisp.html": "/autoloads-in-emacs-lisp/",
+    "/2014/08/12/emacs-script-pitfalls": "/emacs-script-pitfalls/",
+    "/2014/08/12/emacs-script-pitfalls.html": "/emacs-script-pitfalls/",
     "/posts/emacs-script-pitfalls.html": "/emacs-script-pitfalls/",
   },
 });
