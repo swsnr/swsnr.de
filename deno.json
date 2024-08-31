@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.0/"
+    "lume/": "https://deno.land/x/lume@v2.3.0/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-read --allow-net=jsr.io,deno.land,0.0.0.0:3000 --allow-sys=networkInterfaces --allow-write=./_site --allow-env -",
