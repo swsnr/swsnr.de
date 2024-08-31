@@ -78,7 +78,11 @@ article {
   max-width: 80ex;
   margin: auto;
 
-  text-wrap: pretty;
+  & p {
+    text-align: justify;
+    text-wrap: pretty;
+    hyphens: auto;
+  } 
 }
 
 article > header {
