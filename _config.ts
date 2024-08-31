@@ -13,7 +13,6 @@ import nunjucks from "lume/plugins/nunjucks.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
-import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 
 import image from "https://deno.land/x/lume_markdown_plugins@v0.7.0/image.ts";
@@ -52,9 +51,8 @@ site.data("siteTags", tagsForArchives, "/archives");
 // For the index page use the site description as description
 site.data("description", globalData.metas.siteDescription, "/index.njk");
 
-// Template engines and styles
+// Template engine
 site.use(nunjucks());
-site.use(sass());
 
 // Sitemap
 site.use(sitemap());
