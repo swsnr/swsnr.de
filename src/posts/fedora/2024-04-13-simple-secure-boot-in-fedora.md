@@ -274,7 +274,7 @@ That said, I did come across a few oddities in Fedora's packages:
 - There is a signed fwupd EFI binary, but no signed systemd-boot binary?
 - The signed fwupd binary is part of `fwupd-efi` along with the unsigned binary, but for shim the signed and unsigned binaries are split into different packages (and `systemd-boot-unsigned` suggests this is also planned for systemd-boot)?
 
-But I guess these will resolve soon; the dracut situation will calm down over time, and Fedora actively works to improve UKI support (see <https://mastodon.social/@adamw@fosstodon.org/112261283391151932> ff).
+But I guess these will resolve soon; the dracut situation will calm down over time, and Fedora actively works to improve UKI support.
 
 [1]: https://src.fedoraproject.org/rpms/dracut/blob/f40/f/0001-feat-kernel-install-do-nothing-when-KERNEL_INSTALL_I.patch
 [sbctl]: https://github.com/Foxboron/sbctl
