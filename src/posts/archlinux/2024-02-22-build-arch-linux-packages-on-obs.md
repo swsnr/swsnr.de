@@ -42,9 +42,9 @@ $ osc checkout home:swsnr
 
 Your user account / password are not configured yet.
 You will be asked for them below, and they will be stored in
-/home/basti/.config/osc/oscrc for future use.
+/home/swsnr/.config/osc/oscrc for future use.
 
-Creating osc configuration file /home/basti/.config/osc/oscrc ...
+Creating osc configuration file /home/swsnr/.config/osc/oscrc ...
 Username [api.opensuse.org]: swsnr
 Password [swsnr@api.opensuse.org]:
 
@@ -134,7 +134,7 @@ Note that the build services queues all these operations, so depending on where 
 
 ## Use the package
 
-To use the package we first need to import the signing keys from the project page, e.g. <https://build.opensuse.org/projects/home:swsnr/signing_keys> for my home project.
+To use the package we first need to import the signing keys from the project page:
 
 ```console
 # xh 'https://build.opensuse.org/projects/home:swsnr/signing_keys/download?kind=gpg' | pacman-key add -
