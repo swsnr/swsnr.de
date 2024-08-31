@@ -71,6 +71,11 @@ h6 {
   }
 }
 
+article {
+  max-width: 80ex;
+  margin: auto;
+}
+
 article > header {
   & p {
     font-size: 0.85em;
