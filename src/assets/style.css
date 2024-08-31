@@ -16,6 +16,7 @@
 pre {
   display: block;
   overflow-x: auto;
+  font-size: 0.9em;
 }
 
 pre > code {
@@ -66,6 +67,8 @@ h3,
 h4,
 h5,
 h6 {
+  text-wrap: balance;
+
   &:hover .header-anchor {
     display: inline;
   }
@@ -74,6 +77,8 @@ h6 {
 article {
   max-width: 80ex;
   margin: auto;
+
+  text-wrap: pretty;
 }
 
 article > header {
