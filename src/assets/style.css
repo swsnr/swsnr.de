@@ -7,8 +7,6 @@
     var(--swsnr-font-family-emoji);
   --swsnr-spacing: 1rem;
   --swsnr-border-color: grey;
-  --swsnr-link-color: light-dark(darkviolet, lightpink);
-  --swsnr-link-visited-color: light-dark(darkmagenta, hotpink);
 
   font-family: var(--swsnr-font-family);
 }
@@ -29,14 +27,6 @@ code,
 kbd,
 samp {
   font-family: var(--swsnr-font-family-monospace);
-}
-
-a {
-  color: var(--swsnr-link-color);
-
-  &:visited {
-    color: var(--swsnr-link-visited-color);
-  }
 }
 
 hr {
@@ -82,7 +72,7 @@ article {
     text-align: justify;
     text-wrap: pretty;
     hyphens: auto;
-  } 
+  }
 }
 
 article > header {

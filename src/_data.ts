@@ -6,8 +6,7 @@
 
 const metas = {
   site: "Sebastian Wiesner",
-  siteDescription:
-    "System engineer in satellite mission planning. Gnome. Rust. Arch.",
+  siteDescription: "",
   description: "=description",
   title: "=title",
   lang: "=lang",
@@ -16,7 +15,6 @@ const metas = {
 
 const author = {
   name: "Sebastian Wiesner",
-  email: "sebastian@swsnr.de",
 };
 // Default language and layout
 const layout = "layouts/page.njk";
@@ -24,9 +22,7 @@ const lang = "en";
 
 // Navlinks for all content
 const navLinks = [
-  { href: "/archives/", text: "Archive" },
-  { href: "/about/", text: "About" },
-  { href: "/privacy/", text: "Privacy" },
+  { href: "/about/", text: "About & Privacy" },
 ];
 
 export { author, lang, layout, metas, navLinks };

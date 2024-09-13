@@ -5,24 +5,17 @@
 // obtain one at https://mozilla.org/MPL/2.0/.
 
 import date from "lume/plugins/date.ts";
-import feed from "lume/plugins/feed.ts";
-import highlight from "lume/plugins/code_highlight.ts";
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
-import readingInfo from "lume/plugins/reading_info.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sitemap from "lume/plugins/sitemap.ts";
-
-import image from "https://deno.land/x/lume_markdown_plugins@v0.7.0/image.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
 import title_from_heading from "./plugins/title-from-content.ts";
 import excerpt from "./plugins/excerpt.ts";
-
-import * as globalData from "./src/_data.ts";
 
 const site = lume({
   src: "src",
@@ -43,41 +36,13 @@ const site = lume({
   },
 });
 
-const tagsForArchives = ["archlinux", "fedora", "emacs", "gnome"];
-
 site.data("isProduction", Deno.env.get("SWSNR_ENVIRONMENT") == "production");
-// Tags we're interested in for archives
-site.data("siteTags", tagsForArchives, "/archives");
-// For the index page use the site description as description
-site.data("description", globalData.metas.siteDescription, "/index.njk");
 
 // Template engine
 site.use(nunjucks());
 
 // Sitemap
 site.use(sitemap());
-
-// Feeds
-site.use(feed({
-  output: ["/feed.xml", "/feed.json"],
-  query: "type=post !hidden",
-  info: {
-    title: globalData.metas.site,
-    subtitle: globalData.metas.description,
-    lang: globalData.metas.lang,
-  },
-}));
-for (const tag of tagsForArchives) {
-  site.use(feed({
-    output: [`/archives/${tag}.xml`, `/archives/${tag}.json`],
-    query: `type=post !hidden ${tag}`,
-    info: {
-      title: `${globalData.metas.site} – Posts tagged ${tag}`,
-      subtitle: globalData.metas.description,
-      lang: globalData.metas.lang,
-    },
-  }));
-}
 
 // Global metadata
 site.use(metas());
@@ -86,18 +51,12 @@ site.use(metas());
 site.use(relative_urls());
 site.use(resolve_urls());
 
-// Code highlighting
-site.use(highlight());
-
 // Add filter for date formatting with global date settings
 site.use(date());
 // Extract page title from first heading
 site.use(title_from_heading());
 // Generate excerpts and descriptions from contents.
 site.use(excerpt());
-// Use the first image in page content as social image
-site.use(image());
-site.use(readingInfo());
 
 // Copy generic assets
 site.copy("assets");
