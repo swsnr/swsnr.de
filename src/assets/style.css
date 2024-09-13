@@ -1,10 +1,8 @@
 :root {
   --swsnr-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  --swsnr-font-family: system-ui, sans-serif, var(--swsnr-font-family-emoji);
-  --swsnr-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
-    Consolas, "Source Code Pro", "Noto Sans Mono", monospace,
-    var(--swsnr-font-family-emoji);
+  --swsnr-font-family: serif, var(--swsnr-font-family-emoji);
+  --swsnr-font-family-monospace: monospace, var(--swsnr-font-family-emoji);
   --swsnr-spacing: 1rem;
   --swsnr-border-color: grey;
 
@@ -65,7 +63,6 @@ h6 {
 }
 
 article {
-  max-width: 80ex;
   margin: auto;
 
   & p {
