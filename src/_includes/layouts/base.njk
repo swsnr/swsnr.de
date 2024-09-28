@@ -9,9 +9,7 @@
         <meta name="author" content="{{ author.name }}">
         <meta property="article:published_time" content="{{ date | date('ATOM') }}">
         <link rel="canonical" href="{{ url | url(true) }}">
-        {%- if isProduction -%}
         <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        {%- endif -%}
     </head>
     <body>
         <main>
