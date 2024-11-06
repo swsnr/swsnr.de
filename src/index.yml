@@ -1,0 +1,56 @@
+layout: layouts/index.njk
+header:
+  title: Sebastian Wiesner
+  description: System engineer for satellite mission planning.
+  avatar: https://github.com/swsnr.png
+metas:
+  title: =header.title
+  description: =header.description
+  image: =header.avatar
+  generator: true
+links:
+  - type: mailboxdotorg
+    text: sebastian@swsnr.de
+    href: mailto:sebastian@swsnr.de
+    background: '#76bb21'
+    color: white
+  - type: orcid
+    text: 0000-0001-5918-3786
+    href: https://orcid.org/0000-0001-5918-3786
+    background: '#a6ce39'
+    color: black
+  - type: github
+    text: swsnr
+    href: https://github.com/swsnr
+    background: '#181717'
+    color: white
+  - type: codeberg
+    text: swsnr
+    href: https://codeberg.org/swsnr
+    background: '#2185D0'
+    color: white
+  - type: opensuse
+    text: home:swsnr
+    href: 'https://build.opensuse.org/project/show/home:swsnr'
+    background: '#73BA25'
+    color: black
+  - type: archlinux
+    text: swsnr
+    href: https://gitlab.archlinux.org/swsnr
+    background: '#1793D1'
+    color: white
+  - type: mastodon
+    text: '@swsnr@mastodon.social'
+    href: 'https://mastodon.social/@swsnr'
+    background: '#6364FF'
+    color: white
+  - type: linkedin
+    text: Sebastian Wiesner
+    href: https://www.linkedin.com/in/swsnr
+    background: '#0A66C2'
+    color: white
+  - type: paypal
+    text: paypal.me/swsnr
+    href: https://paypal.me/swsnr
+    background: '#003087'
+    color: white
