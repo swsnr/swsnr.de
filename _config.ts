@@ -11,6 +11,7 @@ import nunjucks from "lume/plugins/nunjucks.ts";
 import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import icons from "lume/plugins/icons.ts";
 
 import anchor from "npm:markdown-it-anchor";
 
@@ -57,6 +58,18 @@ site.use(date());
 site.use(title_from_heading());
 // Generate excerpts and descriptions from contents.
 site.use(excerpt());
+
+// Icons
+site.use(icons({
+  folder: "/assets/icons",
+  catalogs: [
+    {
+      // https://simpleicons.org/
+      id: "simpleicons",
+      src: "https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/{name}.svg",
+    },
+  ],
+}));
 
 // Copy generic assets
 site.copy("assets");

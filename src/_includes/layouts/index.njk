@@ -18,6 +18,10 @@
     </script>
     <script data-goatcounter="https://swsnr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <style>
+        .swsnr-icon-white {
+          filter: invert(1);
+        }
+
         .btn-swsnr-custom {
         --bs-btn-color: var(--swsnr-color);
         --bs-btn-bg: var(--swsnr-background);
@@ -55,7 +59,7 @@
                     <p class="card-text">{{header.description}}</p>
                     <div class="d-grid gap-3">
                     {% for link in links -%}
-                        <a rel="me" class="btn btn-swsnr-custom" style="--swsnr-background: {{link.background}}; --swsnr-color: {{link.color}}" href="{{link.href}}"><img height="16" width="16" src="https://cdn.simpleicons.org/{{link.type}}/{{link.color}}"/> {{link.text}}</a>
+                        <a rel="me" class="btn btn-swsnr-custom" style="--swsnr-background: {{link.background}}; --swsnr-color: {{link.color}}" href="{{link.href}}"><img class="swsnr-icon-{{link.color}}" height="16" width="16" src="{{link.type | icon("simpleicons") }}"/> {{link.text}}</a>
                     {%- endfor %}
                     </div>
                 </div>
